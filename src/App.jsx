@@ -1,35 +1,64 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+/**
+ * Main App Component - Taekwondo Theory Quiz
+ */
+
+import { ThemeProvider, createTheme, CssBaseline } from '@mui/material';
+import Setup from './components/Setup';
+import Quiz from './components/Quiz';
+import Results from './components/Results';
+import { useQuiz } from './hooks/useQuiz';
+import questionsData from './data/questions.json';
+
+// Create Material UI theme
+const theme = createTheme({
+  palette: {
+    primary: {
+      main: '#1976d2',
+    },
+    success: {
+      main: '#4caf50',
+    },
+    error: {
+      main: '#f44336',
+    },
+  },
+});
 
 function App() {
-  const [count, setCount] = useState(0)
+  const quiz = useQuiz(questionsData);
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
+
+      {quiz.quizState === 'setup' && (
+        <Setup
+          metadata={questionsData.metadata}
+          onStartQuiz={quiz.startQuiz}
+          warning={quiz.warning}
+        />
+      )}
+
+      {quiz.quizState === 'quiz' && (
+        <Quiz
+          getCurrentQuestion={quiz.getCurrentQuestion}
+          getProgress={quiz.getProgress}
+          answered={quiz.answered}
+          selectedAnswer={quiz.selectedAnswer}
+          handleAnswerSelect={quiz.handleAnswerSelect}
+          handleNext={quiz.handleNext}
+          isAnswerCorrect={quiz.isAnswerCorrect}
+        />
+      )}
+
+      {quiz.quizState === 'results' && (
+        <Results
+          results={quiz.getResults()}
+          onRestart={quiz.restartQuiz}
+        />
+      )}
+    </ThemeProvider>
+  );
 }
 
-export default App
+export default App;
