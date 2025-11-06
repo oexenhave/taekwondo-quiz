@@ -120,16 +120,12 @@ Multi-language support with bidirectional translation (e.g., Korean→Danish, Da
       "translations": {
         "ko": "Apchagi",
         "da": "Front spark",
-        "en": null  // Prepared for future English translation
-      },
-      "alternativeTranslations": {
-        "da": ["Frontspark"], // Optional: from <da-alt> tags
-        "en": []
+        "en": "Front kick"  // English translation included
       },
       "incorrectAnswers": {
         "da": [],  // Optional: if empty, generate randomly when asking ko→da
         "ko": [],  // Optional: if empty, generate randomly when asking da→ko
-        "en": []   // For future use
+        "en": []   // Optional: if empty, generate randomly when asking ko→en
       }
     }
   ]
