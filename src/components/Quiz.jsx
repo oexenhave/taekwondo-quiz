@@ -11,7 +11,8 @@ export default function Quiz({
   selectedAnswer,
   handleAnswerSelect,
   handleNext,
-  isAnswerCorrect
+  isAnswerCorrect,
+  onRestart
 }) {
   const currentQuestion = getCurrentQuestion();
   const progress = getProgress();
@@ -29,6 +30,7 @@ export default function Quiz({
       onAnswerSelect={handleAnswerSelect}
       onNext={handleNext}
       isAnswerCorrect={isAnswerCorrect}
+      onRestart={onRestart}
     />
   );
 }

@@ -22,11 +22,12 @@ export default function Results({ results, onRestart }) {
         justifyContent: 'center',
         alignItems: 'center',
         minHeight: '100vh',
+        width: '100%',
         bgcolor: 'background.default',
         p: 2
       }}
     >
-      <Card sx={{ maxWidth: 600, width: '100%' }}>
+      <Card sx={{ width: { xs: '100%', sm: 600 } }}>
         <CardContent sx={{ p: 4, textAlign: 'center' }}>
           <Typography variant="h4" component="h1" gutterBottom>
             Resultat

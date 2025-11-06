@@ -2,7 +2,8 @@
  * QuizCard Component - Display single question with answers
  */
 
-import { Box, Card, CardContent, Typography, Button, Chip } from '@mui/material';
+import { Box, Card, CardContent, Typography, Button, Chip, IconButton } from '@mui/material';
+import { Home as HomeIcon } from '@mui/icons-material';
 import confetti from 'canvas-confetti';
 
 export default function QuizCard({
@@ -12,7 +13,8 @@ export default function QuizCard({
   selectedAnswer,
   onAnswerSelect,
   onNext,
-  isAnswerCorrect
+  isAnswerCorrect,
+  onRestart
 }) {
   const handleAnswerClick = (answer) => {
     if (!answered) {
@@ -29,31 +31,42 @@ export default function QuizCard({
     }
   };
 
-  const getButtonColor = (answer) => {
-    if (!answered) return 'primary';
+  const getButtonStyles = (answer) => {
+    if (!answered) {
+      return {};
+    }
 
     // Show correct answer in green
     if (isAnswerCorrect(answer)) {
-      return 'success';
+      return {
+        backgroundColor: '#4caf50',
+        color: 'white',
+        borderColor: '#4caf50',
+        '&:hover': {
+          backgroundColor: '#45a049'
+        }
+      };
     }
 
     // Show selected wrong answer in red
     if (answer === selectedAnswer && !isAnswerCorrect(answer)) {
-      return 'error';
+      return {
+        backgroundColor: '#f44336',
+        color: 'white',
+        borderColor: '#f44336',
+        '&:hover': {
+          backgroundColor: '#da190b'
+        }
+      };
     }
 
-    return 'primary';
-  };
-
-  const getButtonVariant = (answer) => {
-    if (!answered) return 'outlined';
-
-    // Highlight correct and selected answers
-    if (isAnswerCorrect(answer) || answer === selectedAnswer) {
-      return 'contained';
-    }
-
-    return 'outlined';
+    // Other answers: keep neutral/muted
+    return {
+      backgroundColor: 'transparent',
+      color: 'rgba(0, 0, 0, 0.38)',
+      borderColor: 'rgba(0, 0, 0, 0.12)',
+      pointerEvents: 'none'
+    };
   };
 
   return (
@@ -63,19 +76,28 @@ export default function QuizCard({
         justifyContent: 'center',
         alignItems: 'center',
         minHeight: '100vh',
+        width: '100%',
         bgcolor: 'background.default',
         p: 2
       }}
     >
-      <Card sx={{ maxWidth: 600, width: '100%' }}>
+      <Card sx={{ width: { xs: '100%', sm: 600 } }}>
         <CardContent sx={{ p: 3 }}>
-          {/* Progress Indicator */}
+          {/* Progress Indicator and Restart Button */}
           <Box sx={{ mb: 3, display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
             <Chip
               label={`Spørgsmål ${progress.current}/${progress.total}`}
               color="primary"
               variant="outlined"
             />
+            <IconButton
+              onClick={onRestart}
+              color="primary"
+              aria-label="start over"
+              title="Start forfra"
+            >
+              <HomeIcon />
+            </IconButton>
           </Box>
 
           {/* Question Text */}
@@ -93,19 +115,19 @@ export default function QuizCard({
             {question.answers.map((answer, index) => (
               <Button
                 key={index}
-                variant={getButtonVariant(answer)}
-                color={getButtonColor(answer)}
+                variant={answered ? 'contained' : 'outlined'}
                 fullWidth
                 size="large"
                 onClick={() => handleAnswerClick(answer)}
-                disabled={answered}
                 sx={{
                   mb: 2,
                   py: 2,
                   fontSize: '1rem',
                   textTransform: 'none',
                   justifyContent: 'flex-start',
-                  textAlign: 'left'
+                  textAlign: 'left',
+                  cursor: answered ? 'default' : 'pointer',
+                  ...getButtonStyles(answer)
                 }}
               >
                 {answer}

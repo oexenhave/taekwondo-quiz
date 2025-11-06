@@ -48,6 +48,7 @@ function App() {
           handleAnswerSelect={quiz.handleAnswerSelect}
           handleNext={quiz.handleNext}
           isAnswerCorrect={quiz.isAnswerCorrect}
+          onRestart={quiz.restartQuiz}
         />
       )}
 
