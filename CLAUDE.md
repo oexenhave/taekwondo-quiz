@@ -22,56 +22,23 @@ A Progressive Web App (PWA) quiz application for Taekwondo students to practice 
 - **Language support**: Danish and Korean in MVP, data structure prepared for English
 
 ### Data Model Strategy
-- Convert XML → JSON with English field names (preserve Korean/Danish content)
 - Use normalized identifiers for belt ranks (`10_kup`, `1_dan`) and categories (`leg_techniques`, `stances`)
 - Store translations in centralized metadata structure for consistency
 - Support both explicit incorrect answers AND random generation:
   - If incorrect answers are specified → use them
   - If not specified → randomly pick from similar categories (e.g., other techniques in same belt rank/category)
-- Structure should accommodate future customization of incorrect answers
-- Audio files (`<lyd>` tags) are ignored as files are not currently available
+- Structure accommodates future customization of incorrect answers
 
-## Current Data Structure
+### Data Source
+Complete dataset in `questions.json`:
+- **217 vocabulary questions** across all belt ranks (10. kup → 3. dan)
+- **44 theory questions** (1.-3. dan)
+- All vocabulary includes Korean, Danish, and English translations
+- Theory questions in Danish (prepared for English)
 
-### teori_CV_kup.xml
-Curriculum for colored belts (10. kup → 1. kup) and 1.-3. dan:
-```xml
-<teorirod>
-  <grad id="10. kup">
-    <stande>          <!-- Stances -->
-    <håndteknikker>   <!-- Hand techniques -->
-    <benteknikker>    <!-- Leg techniques -->
-    <teori>           <!-- Theory terms -->
-    <diverse>         <!-- Miscellaneous -->
-  </grad>
-</teorirod>
-```
+To regenerate or update the dataset, run: `python3 convert_xml_to_json.py`
 
-Each term (`<ord>`):
-- `<ko>`: Korean terminology (romanized)
-- `<da>`: Danish translation (correct answer)
-- `<da-alt>`: Alternative translations (optional, multiple allowed)
-- `<lyd>`: Audio file reference (ignore - files not available)
-
-### teori_CV_dan_extra.xml
-Theory questions for dan ranks (1.-3. dan):
-```xml
-<teorirod>
-  <grad id="1. dan">
-    <spoergsmaal>
-      <sp>Question text in Danish</sp>
-      <sv>Correct answer</sv>
-      <sv-alt>Incorrect option 1</sv-alt>
-      <sv-alt>Incorrect option 2</sv-alt>
-      <sv-alt>Incorrect option 3</sv-alt>
-    </spoergsmaal>
-  </grad>
-</teorirod>
-```
-
-Note: `teori_CV_dan_extra.xml` already has explicit incorrect answers (`sv-alt`)
-
-## Target JSON Data Model
+## JSON Data Model
 
 Separate structures for vocabulary and theory questions with English field names:
 
@@ -279,7 +246,7 @@ Example: If asking ko→da for "Apchagi", select 3 incorrect Danish translations
 
 **For Theory Questions:**
 When `incorrectAnswers[language]` is empty or has fewer than 3 options:
-1. Use provided `incorrectAnswers` first (from `sv-alt` in XML)
+1. Use provided `incorrectAnswers` first
 2. If more options needed, randomly select from other correct answers in same belt rank
 3. If insufficient, expand to adjacent belt ranks
 4. Always ensure no duplicate answers in the final 4 options
@@ -293,6 +260,3 @@ Use this order when:
 - Expanding search for incorrect answers to adjacent belt ranks
 - Filtering questions by difficulty/progression level
 - Displaying progress to users
-
-## File Encoding
-Current XML files use **ISO-8859-1** encoding for Danish characters (æ, ø, å). Ensure proper handling during conversion to JSON (use UTF-8 for JSON).
