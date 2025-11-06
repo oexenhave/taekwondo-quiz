@@ -135,21 +135,23 @@ export default function QuizCard({
             ))}
           </Box>
 
-          {/* Next Button */}
-          {answered && (
-            <Button
-              variant="contained"
-              size="large"
-              fullWidth
-              onClick={onNext}
-              sx={{
-                py: 1.5,
-                fontSize: '1.1rem'
-              }}
-            >
-              Næste
-            </Button>
-          )}
+          {/* Next Button - always reserve space to prevent layout jump */}
+          <Box sx={{ minHeight: '56px' }}>
+            {answered && (
+              <Button
+                variant="contained"
+                size="large"
+                fullWidth
+                onClick={onNext}
+                sx={{
+                  py: 1.5,
+                  fontSize: '1.1rem'
+                }}
+              >
+                Næste
+              </Button>
+            )}
+          </Box>
         </CardContent>
       </Card>
     </Box>
