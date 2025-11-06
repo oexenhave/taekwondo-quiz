@@ -1,0 +1,450 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<teorirod>
+	<overskrift>CV teori dan</overskrift>
+	<grad id="1. dan">
+		<spoergsmaal>
+			<sp>Hvad hedder alle farvede bælter, 9.-1. kup?
+			</sp>
+			<sv>Yu Kup Ja
+			</sv>
+			<sv-alt>Yu Kup Nim
+			</sv-alt>
+			<sv-alt>Cho Kup Ja
+			</sv-alt>
+		</spoergsmaal>
+		<spoergsmaal>
+			<sp>Hvad hedder alle danbærere?
+			</sp>
+			<sv>Yu dan ja
+			</sv>
+			<sv-alt>Cho dan ja
+			</sv-alt>
+			<sv-alt>Ko dan ja
+			</sv-alt>
+		</spoergsmaal>
+		<spoergsmaal>
+			<sp>I hvilken taegeuk bruges "Bo joomeok"?
+			</sp>
+			<sv>Taegeuk Chil Jang
+			</sv>
+			<sv-alt>Taegeuk Pal Jang
+			</sv-alt>
+			<sv-alt>Taegeuk Yook Jang
+			</sv-alt>
+		</spoergsmaal>
+		<spoergsmaal>
+			<sp>I hvilken taegeuk bruges "Eolgul jireugi"?
+			</sp>
+			<sv>Taegeuk Yi Jang
+			</sv>
+			<sv-alt>Taegeuk Pal Jang
+			</sv-alt>
+			<sv-alt>Taegeuk Yook Jang
+			</sv-alt>
+		</spoergsmaal>
+		<spoergsmaal>
+			<sp>Hvilke fire GWE'er er repræsenteret på det koreanske flag?
+			</sp>
+			<sv>1 (Geon), 3 (Ri), 6 (Gam), 8 (Gon) 
+			</sv>
+			<sv-alt>2 (Tae), 4 (Jin), 6 (Gam), 8 (Gon)
+			</sv-alt>
+			<sv-alt>1 (Geon), 3 (Ri), 5 (Son), 7 (Gan)
+			</sv-alt>
+		</spoergsmaal>
+		<spoergsmaal>
+			<sp>Hvad symboliserer GWE'en til "Taegeuk Sam Jang"?
+			</sp>
+			<sv>Ild/solen
+			</sv>
+			<sv-alt>Jord/mørke
+			</sv-alt>
+			<sv-alt>Vand
+			</sv-alt>
+		</spoergsmaal>
+		<spoergsmaal>
+			<sp>Hvad symboliserer GWE'en til "Taegeuk Yook Jang"?
+			</sp>
+			<sv>Vand
+			</sv>
+			<sv-alt>Jord/mørke
+			</sv-alt>
+			<sv-alt>Vind
+			</sv-alt>
+		</spoergsmaal>
+		<spoergsmaal>
+			<sp>Hvad symboliserer GWE'en til "Taegeuk Chil Jang"?
+			</sp>
+			<sv>Bjerg
+			</sv>
+			<sv-alt>Torden
+			</sv-alt>
+			<sv-alt>Vind
+			</sv-alt>
+		</spoergsmaal>
+		<spoergsmaal>
+			<sp>Hvad er "Palgwe"?
+			</sp>
+			<sv>De otte GWE'er der repræsenterer de otte taegeuk'er
+			</sv>
+			<sv-alt>GWE'en der repræsenterer Taegeuk Pal Jang
+			</sv-alt>
+			<sv-alt>De GWE'er der er på det koreanske flag
+			</sv-alt>
+		</spoergsmaal>
+		<spoergsmaal>
+			<sp>Hvad hedder udgangsstillingen i alle taegeuk'er?
+			</sp>
+			<sv>Gibon joonbi seogi
+			</sv>
+			<sv-alt>Tongmilgi joonbi seogi
+			</sv-alt>
+			<sv-alt>Bo joomeok joobi seogi
+			</sv-alt>
+		</spoergsmaal>
+		<spoergsmaal>
+			<sp>Hvilken af disse taegeuk'er har flest handlinger?
+			</sp>
+			<sv>Taegeuk Chil Jang
+			</sv>
+			<sv-alt>Taegeuk Oh Jang
+			</sv-alt>
+			<sv-alt>Taegeuk Sam Jang
+			</sv-alt>
+		</spoergsmaal>
+		<spoergsmaal>
+			<sp>Hvad er det primære formål med "Kihap"?
+			</sp>
+			<sv>At koncentrere ens samlede energi i ét punkt, på ét bestemt tidspunkt
+			</sv>
+			<sv-alt>At vise at man har overskud
+			</sv-alt>
+			<sv-alt>At påkalde sig andres opmærksomhed og få hjælp i en farlig situation
+			</sv-alt>
+		</spoergsmaal>
+		<spoergsmaal>
+			<sp>Hvor længe er det rationelt at behandle en alvorlig skade i henhold til RICE-princippet?
+			</sp>
+			<sv>24-36 timer efter skaden
+			</sv>
+			<sv-alt>De første par uger efter skaden
+			</sv-alt>
+			<sv-alt>1-3 timer efter skaden
+			</sv-alt>
+		</spoergsmaal>
+		<spoergsmaal>
+			<sp>Hvornår påbegyndes forsigtige bevægeøvelser og genoptræning efter en skade?
+			</sp>
+			<sv>Allerede næste dag kan man begynde at genoptræne
+			</sv>
+			<sv-alt>Allerede 1-2 timer efter skaden
+			</sv-alt>
+			<sv-alt>Man bør vente et par uger før opstart med genoptræning
+			</sv-alt>
+		</spoergsmaal>
+		<spoergsmaal>
+			<sp>Hvad er det vigtigste formål med skadesbehandling efter RICE-princippet?
+			</sp>
+			<sv>At hindre yderligere skade og blødning
+			</sv>
+			<sv-alt>At yde smertelindring
+			</sv-alt>
+			<sv-alt>At man kan genoptage træningen/kampen efter få minutters pause
+			</sv-alt>
+		</spoergsmaal>
+		<spoergsmaal>
+			<sp>Hvem stiftede "Moo Duk Kwan"?
+			</sp>
+			<sv>Stormester Hwang Kee
+			</sv>
+			<sv-alt>Stormester Kim Un Young
+			</sv-alt>
+			<sv-alt>Stormester Hong Jong-Soo
+			</sv-alt>
+		</spoergsmaal>
+		<spoergsmaal>
+			<sp>Fra hvilket rige kom "Hwarang"?
+			</sp>
+			<sv>Silla
+			</sv>
+			<sv-alt>Koguryo
+			</sv-alt>
+			<sv-alt>Paekche
+			</sv-alt>
+		</spoergsmaal>
+		<spoergsmaal>
+			<sp>Hvorfra stammer navnet "Koryo"?
+			</sp>
+			<sv>Fra et gammelt koreansk dynasti
+			</sv>
+			<sv-alt>Fra et koreansk tempel
+			</sv-alt>
+			<sv-alt>Fra en koreansk slette
+			</sv-alt>
+		</spoergsmaal>
+		<spoergsmaal>
+			<sp>Hvad hedder udgangspositionen i "Poomse Koryo"?
+			</sp>
+			<sv>Tongmilgi joonbi seogi
+			</sv>
+			<sv-alt>Gyopson joonbi seogi
+			</sv-alt>
+			<sv-alt>Gibon joonbi seogi
+			</sv-alt>
+		</spoergsmaal>
+		<spoergsmaal>
+			<sp>Hvad hedder den sidste håndhandling i "Poomse Koryo"?
+			</sp>
+			<sv>Kaljaebi
+			</sv>
+			<sv-alt>Batang son teok chigi
+			</sv-alt>
+			<sv-alt>Deung joomeok eolgul ape chigi
+			</sv-alt>
+		</spoergsmaal>
+		<spoergsmaal>
+			<sp>Hvor mange handleringer er der i "Poomse Koryo"?
+			</sp>
+			<sv>30
+			</sv>
+			<sv-alt>28
+			</sv-alt>
+			<sv-alt>32
+			</sv-alt>
+		</spoergsmaal>
+		<spoergsmaal>
+			<sp>I hvilken taegeuk bruger man "An palmok" i forsvar?
+			</sp>
+			<sv>Taegeuk Chil Jang
+			</sv>
+			<sv-alt>Taegeuk Yook Jang
+			</sv-alt>
+			<sv-alt>Taegeuk Sah Jang
+			</sv-alt>
+		</spoergsmaal>
+		<spoergsmaal>
+			<sp>Hvornår kom Stormester Choi Kyoung An til Danmark?
+			</sp>
+			<sv>1976
+			</sv>
+			<sv-alt>1971
+			</sv-alt>
+			<sv-alt>1969
+			</sv-alt>
+		</spoergsmaal>
+		<spoergsmaal>
+			<sp>I hvilken taegeuk optræder "Beom seogi" første gang?
+			</sp>
+			<sv>Taegeuk Chil Jang
+			</sv>
+			<sv-alt>Taegeuk Yook Jang
+			</sv-alt>
+			<sv-alt>Taegeuk Pal Jang
+			</sv-alt>
+		</spoergsmaal>
+		<spoergsmaal>
+			<sp>Hvilken arm er nederst i "Eotgeoreo area makki" hvis man står i "Oen apgoobi"?
+			</sp>
+			<sv>Venstre
+			</sv>
+			<sv-alt>Højre
+			</sv-alt>
+			<sv-alt>Det er ligegyldigt
+			</sv-alt>
+		</spoergsmaal>
+		<spoergsmaal>
+			<sp>I hvor mange taegeuk'er bruges "Sonnal momtong makki"?
+			</sp>
+			<sv>Tre
+			</sv>
+			<sv-alt>En
+			</sv-alt>
+			<sv-alt>To
+			</sv-alt>
+		</spoergsmaal>
+		<spoergsmaal>
+			<sp>Hvad betyder "Gam jeom"?
+			</sp>
+			<sv>Minus point
+			</sv>
+			<sv-alt>Stop
+			</sv-alt>
+			<sv-alt>Advarsel
+			</sv-alt>
+		</spoergsmaal>
+		<spoergsmaal>
+			<sp>I hvilken taegeuk/poomse bruges "Bakat palmok eolgul bakat makki"?
+			</sp>
+			<sv>Taegeuk Yook Jang
+			</sv>
+			<sv-alt>Poomse Koryo
+			</sv-alt>
+			<sv-alt>Taegeuk Sah Jang
+			</sv-alt>
+		</spoergsmaal>
+		<spoergsmaal>
+			<sp>Hvor på knytnæven rammer man ved almindelig "Jireugi"?
+			</sp>
+			<sv>Knoerne svarende til pege- og langefinger
+			</sv>
+			<sv-alt>Knoerne svarende til ring- og lillefinger
+			</sv-alt>
+			<sv-alt>Knoerne svarende til pege-, lange, ring- og lillefingre
+			</sv-alt>
+		</spoergsmaal>
+		<spoergsmaal>
+			<sp>Hvad hedder det koreanske flag?
+			</sp>
+			<sv>Taegeukgi
+			</sv>
+			<sv-alt>Choson
+			</sv-alt>
+			<sv-alt>Hanguk
+			</sv-alt>
+		</spoergsmaal>
+		<spoergsmaal>
+			<sp>Hvad symboliserer cirklen i midten af det koreanske flag?
+			</sp>
+			<sv>Um og Yang
+			</sv>
+			<sv-alt>Jorden
+			</sv-alt>
+			<sv-alt>Palgwe
+			</sv-alt>
+		</spoergsmaal>
+		<spoergsmaal>
+			<sp>Hvornår blev DTaF stiftet?
+			</sp>
+			<sv>1975
+			</sv>
+			<sv-alt>1980
+			</sv-alt>
+			<sv-alt>1970
+			</sv-alt>
+		</spoergsmaal>
+		<spoergsmaal>
+			<sp>Hvornår kom Taekwondo til Danmark?
+			</sp>
+			<sv>1968
+			</sv>
+			<sv-alt>1976
+			</sv-alt>
+			<sv-alt>1972
+			</sv-alt>
+		</spoergsmaal>
+	</grad>
+	<grad id="2. dan">
+		<spoergsmaal>
+			<sp>Hvilken taegeuk/poomse indeholder ikke "Ap chagi"?
+			</sp>
+			<sv>Poomse Keumgang
+			</sv>
+			<sv-alt>Poomse Koryo
+			</sv-alt>
+			<sv-alt>Taegeuk Sah Jang
+			</sv-alt>
+		</spoergsmaal>
+		<spoergsmaal>
+			<sp>I hvilken taegeuk/poomse bruges "Jijjitki"?
+			</sp>
+			<sv>Poomse Keumgang
+			</sv>
+			<sv-alt>Taegeuk Pal Jang
+			</sv-alt>
+			<sv-alt>Poomse Koryo
+			</sv-alt>
+		</spoergsmaal>
+		<spoergsmaal>
+			<sp>Hvad symboliserer ordet "Keumgang"?
+			</sp>
+			<sv>At være for stærk til at blive slået i stykker
+			</sv>
+			<sv-alt>Stor og mægtig kriger
+			</sv-alt>
+			<sv-alt>Majestætisk bjerg
+			</sv-alt>
+		</spoergsmaal>
+		<spoergsmaal>
+			<sp>Hvad tegner bevægelsesmønstret i "Poomse Keumgang"?
+			</sp>
+			<sv>Det kinesiske tegn for bjerg
+			</sv>
+			<sv-alt>Det kinesiske tegn for kriger
+			</sv-alt>
+			<sv-alt>Det kinesiske tegn for diamant
+			</sv-alt>
+		</spoergsmaal>
+		<spoergsmaal>
+			<sp>Hvad er "Keumgang-san"?
+			</sp>
+			<sv>Et bjerg i Korea
+			</sv>
+			<sv-alt>En diamant
+			</sv-alt>
+			<sv-alt>En viljestærk mand
+			</sv-alt>
+		</spoergsmaal>
+		<spoergsmaal>
+			<sp>Hvornår blev det koreanske flag skabt?
+			</sp>
+			<sv>1882
+			</sv>
+			<sv-alt>1955
+			</sv-alt>
+			<sv-alt>1680
+			</sv-alt>
+		</spoergsmaal>
+		<spoergsmaal>
+			<sp>Hvor mange handlinger er der i "Poomse Keumgang"?
+			</sp>
+			<sv>27
+			</sv>
+			<sv-alt>30
+			</sv-alt>
+			<sv-alt>26
+			</sv-alt>
+		</spoergsmaal>
+	</grad>
+	<grad id="3. dan">
+		<spoergsmaal>
+			<sp>Hvorfra stammer navnet "Taebaek"?
+			</sp>
+			<sv>Det er et gammelt navn for Baekdoo bjerget
+			</sv>
+			<sv-alt>Det betyder letfodet
+			</sv-alt>
+			<sv-alt>Det er et gammelt navn for Korea
+			</sv-alt>
+		</spoergsmaal>
+		<spoergsmaal>
+			<sp>Hvordan skal bevægelserne i "Poomse Taebaek" udføres?
+			</sp>
+			<sv>Præcist og letfodet
+			</sv>
+			<sv-alt>Kraftfuldt og majestætisk
+			</sv-alt>
+			<sv-alt>Hurtigt og kraftfuldt
+			</sv-alt>
+		</spoergsmaal>
+		<spoergsmaal>
+			<sp>Hvad hedder den første blokade i "Poomse Taebaek"?
+			</sp>
+			<sv>Sonnal arae hechyeo makki
+			</sv>
+			<sv-alt>Hansonnal arae makki
+			</sv-alt>
+			<sv-alt>Sonnal arae eotgeoreo makki
+			</sv-alt>
+		</spoergsmaal>
+		<spoergsmaal>
+			<sp>Hvor mange handlinger er der i "Poomse Taebaek"?
+			</sp>
+			<sv>26
+			</sv>
+			<sv-alt>27
+			</sv-alt>
+			<sv-alt>30
+			</sv-alt>
+		</spoergsmaal>
+	</grad>
+</teorirod>
