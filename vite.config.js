@@ -14,9 +14,9 @@ export default defineConfig({
       registerType: 'autoUpdate',
       includeAssets: ['icons/*.png'],
       manifest: {
-        name: 'Taekwondo Theory Quiz',
-        short_name: 'TKD Quiz',
-        description: 'Practice Taekwondo theory and terminology',
+        name: 'Seung Li Quiz',
+        short_name: 'Seung Li Quiz',
+        description: 'Øv Taekwondo teori og terminologi',
         theme_color: '#1976d2',
         background_color: '#ffffff',
         display: 'standalone',

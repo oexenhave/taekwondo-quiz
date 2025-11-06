@@ -1,5 +1,5 @@
 /**
- * Main App Component - Taekwondo Theory Quiz
+ * Main App Component
  */
 
 import { ThemeProvider, createTheme, CssBaseline } from '@mui/material';
