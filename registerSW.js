@@ -1,0 +1,1 @@
+if('serviceWorker' in navigator) {window.addEventListener('load', () => {navigator.serviceWorker.register('/taekwondo-quiz/sw.js', { scope: '/taekwondo-quiz/' })})}
