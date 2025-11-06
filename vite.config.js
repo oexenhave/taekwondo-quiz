@@ -6,7 +6,7 @@ import { VitePWA } from 'vite-plugin-pwa'
 export default defineConfig({
   // For GitHub Pages: set base to '/repository-name/'
   // For custom domain or root: set base to '/'
-  base: process.env.NODE_ENV === 'production' ? '/Teori/' : '/',
+  base: process.env.NODE_ENV === 'production' ? '/taekwondo-quiz/' : '/',
 
   plugins: [
     react(),
