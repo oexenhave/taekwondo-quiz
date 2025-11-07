@@ -349,21 +349,6 @@
       }
     },
     {
-      "id": "vocab-10_kup-leg_techniques-003",
-      "beltRank": "10_kup",
-      "category": "leg_techniques",
-      "translations": {
-        "ko": "Apdro naeryeo chagi",
-        "da": "Nedadgående spark",
-        "en": "Downward kick"
-      },
-      "incorrectAnswers": {
-        "da": [],
-        "ko": [],
-        "en": []
-      }
-    },
-    {
       "id": "vocab-10_kup-leg_techniques-004",
       "beltRank": "10_kup",
       "category": "leg_techniques",
@@ -3789,82 +3774,6 @@
       }
     },
     {
-      "id": "theory-1_dan-013",
-      "beltRank": "1_dan",
-      "question": {
-        "da": "Hvor længe er det rationelt at behandle en alvorlig skade i henhold til RICE-princippet?",
-        "en": null
-      },
-      "correctAnswer": {
-        "da": "24-36 timer efter skaden",
-        "en": null
-      },
-      "incorrectAnswers": {
-        "da": [
-          "De første par uger efter skaden",
-          "1-3 timer efter skaden"
-        ],
-        "en": []
-      }
-    },
-    {
-      "id": "theory-1_dan-014",
-      "beltRank": "1_dan",
-      "question": {
-        "da": "Hvornår påbegyndes forsigtige bevægeøvelser og genoptræning efter en skade?",
-        "en": null
-      },
-      "correctAnswer": {
-        "da": "Allerede næste dag kan man begynde at genoptræne",
-        "en": null
-      },
-      "incorrectAnswers": {
-        "da": [
-          "Allerede 1-2 timer efter skaden",
-          "Man bør vente et par uger før opstart med genoptræning"
-        ],
-        "en": []
-      }
-    },
-    {
-      "id": "theory-1_dan-015",
-      "beltRank": "1_dan",
-      "question": {
-        "da": "Hvad er det vigtigste formål med skadesbehandling efter RICE-princippet?",
-        "en": null
-      },
-      "correctAnswer": {
-        "da": "At hindre yderligere skade og blødning",
-        "en": null
-      },
-      "incorrectAnswers": {
-        "da": [
-          "At yde smertelindring",
-          "At man kan genoptage træningen/kampen efter få minutters pause"
-        ],
-        "en": []
-      }
-    },
-    {
-      "id": "theory-1_dan-016",
-      "beltRank": "1_dan",
-      "question": {
-        "da": "Hvem stiftede \"Moo Duk Kwan\"?",
-        "en": null
-      },
-      "correctAnswer": {
-        "da": "Stormester Hwang Kee",
-        "en": null
-      },
-      "incorrectAnswers": {
-        "da": [
-          "Stormester Kim Un Young",
-          "Stormester Hong Jong-Soo"
-        ],
-        "en": []
-      }
-    },
-    {
       "id": "theory-1_dan-017",
       "beltRank": "1_dan",
       "question": {
@@ -3974,25 +3883,6 @@
         "da": [
           "Taegeuk Yook Jang",
           "Taegeuk Sah Jang"
-        ],
-        "en": []
-      }
-    },
-    {
-      "id": "theory-1_dan-023",
-      "beltRank": "1_dan",
-      "question": {
-        "da": "Hvornår kom Stormester Choi Kyoung An til Danmark?",
-        "en": null
-      },
-      "correctAnswer": {
-        "da": "1976",
-        "en": null
-      },
-      "incorrectAnswers": {
-        "da": [
-          "1971",
-          "1969"
         ],
         "en": []
       }
