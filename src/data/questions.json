@@ -4218,13 +4218,14 @@
         "en": null
       },
       "correctAnswer": {
-        "da": "Ild/solen",
+        "da": "Ild/solen (Ri)",
         "en": null
       },
       "incorrectAnswers": {
         "da": [
-          "Jord/mørke",
-          "Vand"
+          "Glæde/flod (Tae)",
+          "Vind (Seon)",
+          "Torden (Jin)"
         ],
         "en": []
       }
@@ -4237,32 +4238,14 @@
         "en": null
       },
       "correctAnswer": {
-        "da": "Vand",
+        "da": "Vand (Gam)",
         "en": null
       },
       "incorrectAnswers": {
         "da": [
-          "Jord/mørke",
-          "Vind"
-        ],
-        "en": []
-      }
-    },
-    {
-      "id": "theory-1_dan-008",
-      "beltRank": "1_dan",
-      "question": {
-        "da": "Hvad symboliserer GWE'en til \"Taegeuk Chill Jang\"?",
-        "en": null
-      },
-      "correctAnswer": {
-        "da": "Bjerg",
-        "en": null
-      },
-      "incorrectAnswers": {
-        "da": [
-          "Torden",
-          "Vind"
+          "Jorden (Gon)",
+          "Vind (Seon)", 
+          "Jorden (Gon)"
         ],
         "en": []
       }
@@ -4940,7 +4923,7 @@
       "id": "theory-1_dan-038",
       "beltRank": "1_dan",
       "question": {
-        "da": "Hvad symboliserer GWE'en til \"Taegeuk Chil Jang\"?",
+        "da": "Hvad symboliserer GWE'en til \"Taegeuk Chill Jang\"?",
         "en": null
       },
       "correctAnswer": {
@@ -5100,7 +5083,7 @@
       "id": "theory-1_dan-046",
       "beltRank": "1_dan",
       "question": {
-        "da": "Hvor mange handleringer er der i \"Taegeuk Chil Jang\"?",
+        "da": "Hvor mange handleringer er der i \"Taegeuk Chill Jang\"?",
         "en": null
       },
       "correctAnswer": {
