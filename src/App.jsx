@@ -54,6 +54,7 @@ function App() {
       {quiz.quizState === 'results' && (
         <Results
           results={quiz.getResults()}
+          metadata={questionsData.metadata}
           onRestart={quiz.restartQuiz}
         />
       )}

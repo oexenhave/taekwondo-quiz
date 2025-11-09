@@ -5,8 +5,11 @@
 import { Box, Card, CardContent, Typography, Button } from '@mui/material';
 import { EmojiEvents as TrophyIcon } from '@mui/icons-material';
 
-export default function Results({ results, onRestart }) {
-  const { score, total, percentage, message } = results;
+export default function Results({ results, metadata, onRestart }) {
+  const { score, total, percentage, message, beltRank, questionCount } = results;
+
+  // Get belt rank label from metadata
+  const beltRankLabel = metadata.beltRanks[beltRank]?.da || beltRank;
 
   const getScoreColor = () => {
     if (percentage >= 90) return 'success.main';
@@ -31,6 +34,15 @@ export default function Results({ results, onRestart }) {
         <CardContent sx={{ p: 4, textAlign: 'center' }}>
           <Typography variant="h4" component="h1" gutterBottom>
             Resultat
+          </Typography>
+
+          {/* Belt Level Info */}
+          <Typography
+            variant="h6"
+            color="text.secondary"
+            sx={{ mb: 2 }}
+          >
+            Test til: {beltRankLabel}
           </Typography>
 
           {/* Trophy Icon */}

@@ -138,7 +138,9 @@ export function useQuiz(questionsData) {
       score,
       total,
       percentage,
-      message
+      message,
+      beltRank: config.beltRank,
+      questionCount: config.questionCount
     };
   };
 
