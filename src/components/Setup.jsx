@@ -50,7 +50,7 @@ export default function Setup({ metadata, onStartQuiz }) {
           {/* Logo */}
           <Box sx={{ display: 'flex', justifyContent: 'center', mb: 3 }}>
             <img
-              src="/rtk-logo.jpg"
+              src={`${import.meta.env.BASE_URL}rtk-logo.jpg`}
               alt="Roskilde Taekwondo Logo"
               style={{
                 maxWidth: '200px',
