@@ -4252,7 +4252,7 @@
       "id": "theory-1_dan-008",
       "beltRank": "1_dan",
       "question": {
-        "da": "Hvad symboliserer GWE'en til \"Taegeuk Chil Jang\"?",
+        "da": "Hvad symboliserer GWE'en til \"Taegeuk Chill Jang\"?",
         "en": null
       },
       "correctAnswer": {
@@ -4852,6 +4852,346 @@
         "da": [
           "27",
           "30"
+        ],
+        "en": []
+      }
+    },
+    {
+      "id": "theory-1_dan-034",
+      "beltRank": "1_dan",
+      "question": {
+        "da": "Hvad symboliserer GWE'en til \"Taegeuk Il Jang\"?",
+        "en": null
+      },
+      "correctAnswer": {
+        "da": "Himmeriget/lyset (Keon)",
+        "en": null
+      },
+      "incorrectAnswers": {
+        "da": [
+          "Glæde/flod (Tae)",
+          "Ild/solen (Ri)",
+          "Torden (Jin)"
+        ],
+        "en": []
+      }
+    },
+    {
+      "id": "theory-1_dan-035",
+      "beltRank": "1_dan",
+      "question": {
+        "da": "Hvad symboliserer GWE'en til \"Taegeuk Yi Jang\"?",
+        "en": null
+      },
+      "correctAnswer": {
+        "da": "Glæde/flod (Tae)",
+        "en": null
+      },
+      "incorrectAnswers": {
+        "da": [
+          "Himmeriget/lyset (Keon)",
+          "Ild/solen (Ri)",
+          "Torden (Jin)"
+        ],
+        "en": []
+      }
+    },
+    {
+      "id": "theory-1_dan-036",
+      "beltRank": "1_dan",
+      "question": {
+        "da": "Hvad symboliserer GWE'en til \"Taegeuk Sah Jang\"?",
+        "en": null
+      },
+      "correctAnswer": {
+        "da": "Torden (Jin)",
+        "en": null
+      },
+      "incorrectAnswers": {
+        "da": [
+          "Ild/solen (Ri)",
+          "Vind (Seon)",
+          "Vand (Gam)"
+        ],
+        "en": []
+      }
+    },
+    {
+      "id": "theory-1_dan-037",
+      "beltRank": "1_dan",
+      "question": {
+        "da": "Hvad symboliserer GWE'en til \"Taegeuk Oh Jang\"?",
+        "en": null
+      },
+      "correctAnswer": {
+        "da": "Vind (Seon)",
+        "en": null
+      },
+      "incorrectAnswers": {
+        "da": [
+          "Torden (Jin)",
+          "Vand (Gam)",
+          "Bjerg (Gan)"
+        ],
+        "en": []
+      }
+    },
+    {
+      "id": "theory-1_dan-038",
+      "beltRank": "1_dan",
+      "question": {
+        "da": "Hvad symboliserer GWE'en til \"Taegeuk Chil Jang\"?",
+        "en": null
+      },
+      "correctAnswer": {
+        "da": "Bjerg (Gan)",
+        "en": null
+      },
+      "incorrectAnswers": {
+        "da": [
+          "Vand (Gam)",
+          "Jorden (Gon)",
+          "Himmeriget/lyset (Keon)"
+        ],
+        "en": []
+      }
+    },
+    {
+      "id": "theory-1_dan-039",
+      "beltRank": "1_dan",
+      "question": {
+        "da": "Hvad symboliserer GWE'en til \"Taegeuk Pal Jang\"?",
+        "en": null
+      },
+      "correctAnswer": {
+        "da": "Jorden (Gon)",
+        "en": null
+      },
+      "incorrectAnswers": {
+        "da": [
+          "Bjerg (Gan)",
+          "Himmeriget/lyset (Keon)",
+          "Glæde/flod (Tae)"
+        ],
+        "en": []
+      }
+    },
+    {
+      "id": "theory-1_dan-040",
+      "beltRank": "1_dan",
+      "question": {
+        "da": "Hvor mange handleringer er der i \"Taegeuk Il Jang\"?",
+        "en": null
+      },
+      "correctAnswer": {
+        "da": "18",
+        "en": null
+      },
+      "incorrectAnswers": {
+        "da": [
+          "16",
+          "20",
+          "22"
+        ],
+        "en": []
+      }
+    },
+    {
+      "id": "theory-1_dan-041",
+      "beltRank": "1_dan",
+      "question": {
+        "da": "Hvor mange handleringer er der i \"Taegeuk Yi Jang\"?",
+        "en": null
+      },
+      "correctAnswer": {
+        "da": "18",
+        "en": null
+      },
+      "incorrectAnswers": {
+        "da": [
+          "16",
+          "20",
+          "22"
+        ],
+        "en": []
+      }
+    },
+    {
+      "id": "theory-1_dan-042",
+      "beltRank": "1_dan",
+      "question": {
+        "da": "Hvor mange handleringer er der i \"Taegeuk Sam Jang\"?",
+        "en": null
+      },
+      "correctAnswer": {
+        "da": "20",
+        "en": null
+      },
+      "incorrectAnswers": {
+        "da": [
+          "18",
+          "22",
+          "24"
+        ],
+        "en": []
+      }
+    },
+    {
+      "id": "theory-1_dan-043",
+      "beltRank": "1_dan",
+      "question": {
+        "da": "Hvor mange handleringer er der i \"Taegeuk Sah Jang\"?",
+        "en": null
+      },
+      "correctAnswer": {
+        "da": "20",
+        "en": null
+      },
+      "incorrectAnswers": {
+        "da": [
+          "18",
+          "22",
+          "24"
+        ],
+        "en": []
+      }
+    },
+    {
+      "id": "theory-1_dan-044",
+      "beltRank": "1_dan",
+      "question": {
+        "da": "Hvor mange handleringer er der i \"Taegeuk Oh Jang\"?",
+        "en": null
+      },
+      "correctAnswer": {
+        "da": "20",
+        "en": null
+      },
+      "incorrectAnswers": {
+        "da": [
+          "18",
+          "22",
+          "24"
+        ],
+        "en": []
+      }
+    },
+    {
+      "id": "theory-1_dan-045",
+      "beltRank": "1_dan",
+      "question": {
+        "da": "Hvor mange handleringer er der i \"Taegeuk Yook Jang\"?",
+        "en": null
+      },
+      "correctAnswer": {
+        "da": "19",
+        "en": null
+      },
+      "incorrectAnswers": {
+        "da": [
+          "17",
+          "21",
+          "23"
+        ],
+        "en": []
+      }
+    },
+    {
+      "id": "theory-1_dan-046",
+      "beltRank": "1_dan",
+      "question": {
+        "da": "Hvor mange handleringer er der i \"Taegeuk Chil Jang\"?",
+        "en": null
+      },
+      "correctAnswer": {
+        "da": "25",
+        "en": null
+      },
+      "incorrectAnswers": {
+        "da": [
+          "23",
+          "27",
+          "29"
+        ],
+        "en": []
+      }
+    },
+    {
+      "id": "theory-1_dan-047",
+      "beltRank": "1_dan",
+      "question": {
+        "da": "Hvor mange handleringer er der i \"Taegeuk Pal Jang\"?",
+        "en": null
+      },
+      "correctAnswer": {
+        "da": "27",
+        "en": null
+      },
+      "incorrectAnswers": {
+        "da": [
+          "23",
+          "25",
+          "29"
+        ],
+        "en": []
+      }
+    },
+    {
+      "id": "theory-2_dan-041",
+      "beltRank": "2_dan",
+      "question": {
+        "da": "Hvor mange handleringer er der i \"Poomse Keumgang\"?",
+        "en": null
+      },
+      "correctAnswer": {
+        "da": "27",
+        "en": null
+      },
+      "incorrectAnswers": {
+        "da": [
+          "25",
+          "29",
+          "30"
+        ],
+        "en": []
+      }
+    },
+    {
+      "id": "theory-3_dan-045",
+      "beltRank": "3_dan",
+      "question": {
+        "da": "Hvor mange handleringer er der i \"Poomse Taebaek\"?",
+        "en": null
+      },
+      "correctAnswer": {
+        "da": "26",
+        "en": null
+      },
+      "incorrectAnswers": {
+        "da": [
+          "24",
+          "28",
+          "30"
+        ],
+        "en": []
+      }
+    },
+    {
+      "id": "theory-3_dan-046",
+      "beltRank": "3_dan",
+      "question": {
+        "da": "Hvad symboliserer ordet \"Taebaek\"?",
+        "en": null
+      },
+      "correctAnswer": {
+        "da": "Ekstrem lys",
+        "en": null
+      },
+      "incorrectAnswers": {
+        "da": [
+          "Uendelige marker",
+          "Majestætisk bjerg",
+          "Evigt liv"
         ],
         "en": []
       }

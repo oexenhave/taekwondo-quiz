@@ -1,37 +1,37 @@
 #!/usr/bin/env python3
-# Run with: python3 match_korean_ids.py
+# Run with: python3 match_theory.py
 """
-Match Korean terms in markdown files with questions.json and add IDs to fourth column.
+Match theory questions in markdown files with questions.json and add IDs to ID column.
+Works only with theory files (question-based, not vocabulary).
 """
 
 import json
 import re
 from pathlib import Path
-from typing import Dict, List, Tuple
+from typing import Dict, List
 
 
-def load_questions(json_path: Path) -> Dict[str, str]:
+def load_theory_questions(json_path: Path) -> Dict[str, str]:
     """
-    Load questions.json and create a lookup dictionary mapping Korean terms to IDs.
+    Load theory questions from questions.json.
 
     Returns:
-        Dictionary with Korean term (normalized) as key and question ID as value
+        Dictionary mapping normalized Danish question text to question IDs
     """
     with open(json_path, 'r', encoding='utf-8') as f:
         data = json.load(f)
 
-    korean_to_id = {}
+    question_to_id = {}
 
-    # Process vocabulary questions
-    for question in data.get('vocabularyQuestions', []):
-        korean_term = question.get('translations', {}).get('ko', '')
+    for question in data.get('theoryQuestions', []):
+        question_text = question.get('question', {}).get('da', '')
         question_id = question.get('id', '')
-        if korean_term and question_id:
+        if question_text and question_id:
             # Normalize: strip whitespace and convert to lowercase for matching
-            normalized = korean_term.strip().lower()
-            korean_to_id[normalized] = question_id
+            normalized = question_text.strip().lower()
+            question_to_id[normalized] = question_id
 
-    return korean_to_id
+    return question_to_id
 
 
 def parse_markdown_table(content: str) -> List[List[str]]:
@@ -61,12 +61,15 @@ def parse_markdown_table(content: str) -> List[List[str]]:
     return rows
 
 
-def process_markdown_file(file_path: Path, korean_to_id: Dict[str, str]) -> str:
+def process_theory_file(file_path: Path, question_to_id: Dict[str, str]) -> str:
     """
-    Process a markdown file, adding ID column with matched question IDs.
+    Process a theory markdown file, adding ID column with matched question IDs.
+    ONLY updates the ID column (last column), leaves all other columns untouched.
+
+    Expected columns: Belt Rank | Question | Correct Answer | Incorrect 1 | Incorrect 2 | Incorrect 3 | ID
 
     Returns:
-        Updated markdown content with fourth column
+        Updated markdown content with ID column
     """
     with open(file_path, 'r', encoding='utf-8') as f:
         content = f.read()
@@ -77,33 +80,36 @@ def process_markdown_file(file_path: Path, korean_to_id: Dict[str, str]) -> str:
         print(f"  ⚠️  No table found in {file_path.name}")
         return content
 
-    # Process header row
     header = rows[0]
-    if len(header) == 3:
-        header.append('ID')
-    elif len(header) == 4:
-        header[3] = 'ID'
 
-    # Process data rows
+    # Ensure ID column exists in header
+    if 'ID' not in header:
+        header.append('ID')
+
+    id_column_index = header.index('ID')
+
+    # Verify expected structure (Belt Rank at index 0, Question at index 1)
+    if len(header) < 7:
+        print(f"  ⚠️  Warning: Expected 7 columns (Belt Rank, Question, Correct Answer, Incorrect 1-3, ID), found {len(header)}")
+
+    # Process data rows (skip header at index 0)
     for i in range(1, len(rows)):
         row = rows[i]
 
-        # Ensure row has at least 3 columns (category, korean, danish)
         if len(row) < 2:
             continue
 
-        # Get Korean term (column index 1)
-        korean_term = row[1].strip()
-        normalized_korean = korean_term.lower()
+        # Pad row to have enough columns
+        while len(row) <= id_column_index:
+            row.append('')
 
-        # Look up in questions.json
-        question_id = korean_to_id.get(normalized_korean, 'Not found')
+        # Match by question text in column 1 (index 1, column 0 is belt rank)
+        question_text = row[1].strip()
+        normalized_question = question_text.lower()
+        question_id = question_to_id.get(normalized_question, 'Not found')
 
-        # Add or update fourth column
-        if len(row) == 3:
-            row.append(question_id)
-        elif len(row) >= 4:
-            row[3] = question_id
+        # ONLY update the ID column (last column, index 6)
+        row[id_column_index] = question_id
 
     # Reconstruct markdown table
     return format_markdown_table(rows)
@@ -162,19 +168,20 @@ def main():
         print(f"❌ Error: roskilde-source directory not found at {source_dir}")
         return
 
-    # Load Korean term to ID mapping
-    print("Loading questions.json...")
-    korean_to_id = load_questions(json_path)
-    print(f"Loaded {len(korean_to_id)} Korean terms\n")
+    # Load theory question to ID mapping
+    print("Loading theory questions from questions.json...")
+    question_to_id = load_theory_questions(json_path)
+    print(f"Loaded {len(question_to_id)} theory questions\n")
 
-    # Process all markdown files
-    md_files = sorted(source_dir.glob('*.md'))
+    # Process theory markdown files (only additional-questions.md for now)
+    theory_files = [source_dir / 'additional-questions.md']
+    md_files = [f for f in theory_files if f.exists()]
 
     if not md_files:
-        print(f"⚠️  No markdown files found in {source_dir}")
+        print(f"⚠️  No theory markdown files found in {source_dir}")
         return
 
-    print(f"Processing {len(md_files)} markdown files:\n")
+    print(f"Processing {len(md_files)} theory markdown file(s):\n")
 
     stats = {'found': 0, 'not_found': 0, 'total': 0}
 
@@ -182,10 +189,10 @@ def main():
         print(f"Processing {md_file.name}...")
 
         # Process file
-        updated_content = process_markdown_file(md_file, korean_to_id)
+        updated_content = process_theory_file(md_file, question_to_id)
 
-        # Count matches for this file
-        file_found = updated_content.count('vocab-')
+        # Count matches for this file (only count in ID column)
+        file_found = updated_content.count('theory-')
         file_not_found = updated_content.count('Not found')
         file_total = file_found + file_not_found
 
@@ -203,16 +210,16 @@ def main():
     print(f"\n{'='*50}")
     print(f"SUMMARY")
     print(f"{'='*50}")
-    print(f"Total terms processed: {stats['total']}")
+    print(f"Total theory questions processed: {stats['total']}")
     print(f"  ✓ Matched: {stats['found']}")
     print(f"  ✗ Not found: {stats['not_found']}")
 
     if stats['not_found'] > 0:
-        print(f"\n⚠️  {stats['not_found']} terms could not be matched.")
+        print(f"\n⚠️  {stats['not_found']} questions could not be matched.")
         print("This may be due to:")
-        print("  - Different spelling/romanization")
-        print("  - Spacing differences")
-        print("  - Terms not yet in questions.json")
+        print("  - Different wording")
+        print("  - Quote character differences")
+        print("  - Questions not yet in questions.json")
 
 
 if __name__ == '__main__':

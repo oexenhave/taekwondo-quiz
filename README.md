@@ -13,10 +13,10 @@ A Progressive Web App (PWA) quiz application for Taekwondo students to practice 
 
 ## Dataset
 
-- **269 vocabulary questions** across all belt ranks (10. kup → 3. dan)
-- **39 theory questions** (1.-3. dan)
+- **264 vocabulary questions** across all belt ranks (10. kup → 3. dan)
+- **56 theory questions** (1.-3. dan)
 - All vocabulary includes Korean, Danish, and English translations
-- Complete coverage of 10. kup through 1. kup (203 questions)
+- Complete coverage of 10. kup through 3. dan
 
 ## Quick Start
 
@@ -46,23 +46,44 @@ npm run deploy
 
 ## Management Scripts
 
-### Add New Question
+### Add New Questions
 
+Add vocabulary question:
 ```bash
-python3 add_question.py --belt BELT_RANK --category CATEGORY --korean "KOREAN" --danish "DANISH" --english "ENGLISH"
+python3 add_question.py vocab --belt BELT_RANK --category CATEGORY \
+  --korean "KOREAN" --danish "DANISH" --english "ENGLISH"
 ```
 
-Example:
+Add theory question:
 ```bash
-python3 add_question.py --belt 8_kup --category theory_terms --korean "Tasut" --danish "Fem (5)" --english "Five (5)"
+python3 add_question.py theory --belt BELT_RANK \
+  --question "QUESTION_TEXT" --correct "CORRECT_ANSWER" \
+  --incorrect "WRONG_1" --incorrect "WRONG_2" --incorrect "WRONG_3"
 ```
 
-### Match Korean IDs
-
-Updates markdown files with question IDs from questions.json:
-
+Examples:
 ```bash
-python3 match_korean_ids.py
+# Add vocabulary
+python3 add_question.py vocab --belt 8_kup --category theory_terms \
+  --korean "Tasut" --danish "Fem (5)" --english "Five (5)"
+
+# Add theory question
+python3 add_question.py theory --belt 1_dan \
+  --question 'Hvad symboliserer GWE'"'"'en til "Taegeuk Il Jang"?' \
+  --correct "Himmeriget/lyset (Keon)" \
+  --incorrect "Glæde/flod (Tae)" --incorrect "Ild/solen (Ri)" --incorrect "Torden (Jin)"
+```
+
+### Match IDs in Markdown Files
+
+Update vocabulary files (10-kup.md, 9-kup.md, etc.) with question IDs:
+```bash
+python3 match_vocabulary.py
+```
+
+Update theory files (additional-questions.md) with question IDs:
+```bash
+python3 match_theory.py
 ```
 
 ### Fix Belt Ranks

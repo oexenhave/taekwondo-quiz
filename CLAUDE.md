@@ -240,25 +240,40 @@ npm run deploy          # Build and deploy to GitHub Pages
 
 ### Question Management Scripts
 
-**Add New Question:**
+**Add Vocabulary Question:**
 ```bash
-python3 add_question.py --belt BELT_RANK --category CATEGORY \
+python3 add_question.py vocab --belt BELT_RANK --category CATEGORY \
   --korean "KOREAN" --danish "DANISH" --english "ENGLISH"
 ```
 
-**Example:**
+**Add Theory Question:**
 ```bash
-python3 add_question.py --belt 8_kup --category theory_terms \
+python3 add_question.py theory --belt BELT_RANK \
+  --question "QUESTION_TEXT" --correct "CORRECT_ANSWER" \
+  --incorrect "WRONG_1" --incorrect "WRONG_2" --incorrect "WRONG_3"
+```
+
+**Examples:**
+```bash
+# Add vocabulary
+python3 add_question.py vocab --belt 8_kup --category theory_terms \
   --korean "Tasut" --danish "Fem (5)" --english "Five (5)"
+
+# Add theory question
+python3 add_question.py theory --belt 1_dan \
+  --question 'Hvad symboliserer GWE'"'"'en til "Taegeuk Il Jang"?' \
+  --correct "Himmeriget/lyset (Keon)" \
+  --incorrect "Glæde/flod (Tae)" --incorrect "Ild/solen (Ri)" --incorrect "Torden (Jin)"
 ```
 
 **Valid Parameters:**
 - Belt ranks: `10_kup`, `9_kup`, `8_kup`, `7_kup`, `6_kup`, `5_kup`, `4_kup`, `3_kup`, `2_kup`, `1_kup`, `1_dan`, `2_dan`, `3_dan`
-- Categories: `stances`, `hand_techniques`, `leg_techniques`, `theory_terms`, `miscellaneous`
+- Categories (vocabulary only): `stances`, `hand_techniques`, `leg_techniques`, `theory_terms`, `miscellaneous`
 
-**Match Korean IDs:**
+**Match IDs in Markdown Files:**
 ```bash
-python3 match_korean_ids.py    # Updates markdown files with IDs from questions.json
+python3 match_vocabulary.py    # Updates vocabulary files (10-kup.md, etc.) with IDs
+python3 match_theory.py        # Updates theory files (additional-questions.md) with IDs
 ```
 
 **Fix Belt Ranks:**

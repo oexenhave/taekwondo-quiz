@@ -1,40 +1,76 @@
 #!/usr/bin/env python3
-# Run with: python3 add_question.py --belt 8_kup --category theory_terms --korean "Tasut" --danish "Fem (5)" --english "Five (5)"
 """
-Add a new vocabulary question to questions.json with command-line parameters.
+Generic CLI tool to add questions (vocabulary or theory) to questions.json
+
+Usage:
+  # Add vocabulary question
+  python3 add_question.py vocab --belt 8_kup --category theory_terms \\
+    --korean "Tasut" --danish "Fem (5)" --english "Five (5)"
+
+  # Add theory question
+  python3 add_question.py theory --belt 1_dan \\
+    --question "Hvad symboliserer GWE'en til \"Taegeuk Il Jang\"?" \\
+    --correct "Himmeriget/lyset (Keon)" \\
+    --incorrect "Glæde/flod (Tae)" --incorrect "Ild/solen (Ri)" --incorrect "Torden (Jin)"
 """
 
 import json
 import argparse
 from pathlib import Path
+from typing import Dict, List
 
 
-def get_next_id_number(questions, belt_rank, category):
-    """Find the next available ID number for a given belt rank and category."""
+def load_questions(json_path: Path) -> Dict:
+    """Load questions.json"""
+    with open(json_path, 'r', encoding='utf-8') as f:
+        return json.load(f)
+
+
+def save_questions(json_path: Path, data: Dict) -> None:
+    """Save questions.json with pretty formatting"""
+    with open(json_path, 'w', encoding='utf-8') as f:
+        json.dump(data, f, ensure_ascii=False, indent=2)
+
+
+def generate_vocab_id(data: Dict, belt_rank: str, category: str) -> str:
+    """Generate next available vocabulary question ID"""
     prefix = f"vocab-{belt_rank}-{category}-"
-    max_num = 0
+    existing_ids = [
+        q['id'] for q in data.get('vocabularyQuestions', [])
+        if q['id'].startswith(prefix)
+    ]
 
-    for question in questions:
-        question_id = question.get('id', '')
-        if question_id.startswith(prefix):
-            try:
-                num = int(question_id.split('-')[-1])
-                max_num = max(max_num, num)
-            except ValueError:
-                continue
+    if not existing_ids:
+        return f"{prefix}001"
 
-    return max_num + 1
+    # Extract numbers and find max
+    numbers = [int(id.split('-')[-1]) for id in existing_ids]
+    next_num = max(numbers) + 1
+    return f"{prefix}{next_num:03d}"
 
 
-def add_vocabulary_question(data, belt_rank, category, korean, danish, english):
-    """Add a new vocabulary question to the data."""
-    vocab_questions = data['vocabularyQuestions']
+def generate_theory_id(data: Dict, belt_rank: str) -> str:
+    """Generate next available theory question ID"""
+    prefix = f"theory-{belt_rank}-"
+    existing_ids = [
+        q['id'] for q in data.get('theoryQuestions', [])
+        if q['id'].startswith(prefix)
+    ]
 
-    # Get next ID number
-    next_num = get_next_id_number(vocab_questions, belt_rank, category)
-    question_id = f"vocab-{belt_rank}-{category}-{next_num:03d}"
+    if not existing_ids:
+        return f"{prefix}001"
 
-    # Create new question
+    # Extract numbers and find max
+    numbers = [int(id.split('-')[-1]) for id in existing_ids]
+    next_num = max(numbers) + 1
+    return f"{prefix}{next_num:03d}"
+
+
+def add_vocabulary_question(data: Dict, belt_rank: str, category: str,
+                           korean: str, danish: str, english: str = None) -> Dict:
+    """Add a vocabulary question"""
+    question_id = generate_vocab_id(data, belt_rank, category)
+
     new_question = {
         "id": question_id,
         "beltRank": belt_rank,
@@ -42,7 +78,7 @@ def add_vocabulary_question(data, belt_rank, category, korean, danish, english):
         "translations": {
             "ko": korean,
             "da": danish,
-            "en": english
+            "en": english or ""
         },
         "incorrectAnswers": {
             "da": [],
@@ -51,105 +87,149 @@ def add_vocabulary_question(data, belt_rank, category, korean, danish, english):
         }
     }
 
-    # Add to list
-    vocab_questions.append(new_question)
+    if 'vocabularyQuestions' not in data:
+        data['vocabularyQuestions'] = []
 
-    return question_id, new_question
+    data['vocabularyQuestions'].append(new_question)
+
+    print(f"✓ Added vocabulary question: {question_id}")
+    print(f"  Korean: {korean}")
+    print(f"  Danish: {danish}")
+    if english:
+        print(f"  English: {english}")
+
+    return data
+
+
+def add_theory_question(data: Dict, belt_rank: str, question_da: str,
+                       correct_da: str, incorrect_da: List[str]) -> Dict:
+    """Add a theory question"""
+    question_id = generate_theory_id(data, belt_rank)
+
+    new_question = {
+        "id": question_id,
+        "beltRank": belt_rank,
+        "question": {
+            "da": question_da,
+            "en": None
+        },
+        "correctAnswer": {
+            "da": correct_da,
+            "en": None
+        },
+        "incorrectAnswers": {
+            "da": incorrect_da,
+            "en": []
+        }
+    }
+
+    if 'theoryQuestions' not in data:
+        data['theoryQuestions'] = []
+
+    data['theoryQuestions'].append(new_question)
+
+    print(f"✓ Added theory question: {question_id}")
+    print(f"  Question: {question_da}")
+    print(f"  Correct: {correct_da}")
+    print(f"  Incorrect: {', '.join(incorrect_da)}")
+
+    return data
+
+
+def validate_belt_rank(belt_rank: str) -> bool:
+    """Validate belt rank format"""
+    valid_ranks = [
+        '10_kup', '9_kup', '8_kup', '7_kup', '6_kup',
+        '5_kup', '4_kup', '3_kup', '2_kup', '1_kup',
+        '1_dan', '2_dan', '3_dan', '4_dan', '5_dan'
+    ]
+    return belt_rank in valid_ranks
+
+
+def validate_category(category: str) -> bool:
+    """Validate category format"""
+    valid_categories = [
+        'stances', 'hand_techniques', 'leg_techniques',
+        'theory_terms', 'miscellaneous'
+    ]
+    return category in valid_categories
 
 
 def main():
     parser = argparse.ArgumentParser(
-        description='Add a new vocabulary question to questions.json',
+        description='Add questions (vocabulary or theory) to questions.json',
         formatter_class=argparse.RawDescriptionHelpFormatter,
-        epilog="""
-Examples:
-  # Add a single question
-  python3 add_question.py --belt 8_kup --category theory_terms --korean "Tasut" --danish "Fem (5)" --english "Five (5)"
-
-  # Add a technique
-  python3 add_question.py --belt 10_kup --category leg_techniques --korean "Ap chagi" --danish "Front spark" --english "Front kick"
-
-Valid belt ranks:
-  10_kup, 9_kup, 8_kup, 7_kup, 6_kup, 5_kup, 4_kup, 3_kup, 2_kup, 1_kup, 1_dan, 2_dan, 3_dan
-
-Valid categories:
-  stances, hand_techniques, leg_techniques, theory_terms, miscellaneous
-        """
+        epilog=__doc__
     )
 
-    parser.add_argument('--belt', '-b', required=True,
-                       help='Belt rank (e.g., 10_kup, 8_kup, 1_dan)')
-    parser.add_argument('--category', '-c', required=True,
-                       help='Category (e.g., theory_terms, leg_techniques, stances)')
-    parser.add_argument('--korean', '-k', required=True,
-                       help='Korean term (romanized)')
-    parser.add_argument('--danish', '-d', required=True,
-                       help='Danish translation')
-    parser.add_argument('--english', '-e', required=True,
-                       help='English translation')
-    parser.add_argument('--dry-run', action='store_true',
-                       help='Show what would be added without saving')
+    subparsers = parser.add_subparsers(dest='type', help='Question type')
+
+    # Vocabulary question subcommand
+    vocab_parser = subparsers.add_parser('vocab', help='Add vocabulary question')
+    vocab_parser.add_argument('--belt', required=True, help='Belt rank (e.g., 8_kup, 1_dan)')
+    vocab_parser.add_argument('--category', required=True,
+                             help='Category (stances, hand_techniques, leg_techniques, theory_terms, miscellaneous)')
+    vocab_parser.add_argument('--korean', required=True, help='Korean term (romanized)')
+    vocab_parser.add_argument('--danish', required=True, help='Danish translation')
+    vocab_parser.add_argument('--english', help='English translation (optional)')
+
+    # Theory question subcommand
+    theory_parser = subparsers.add_parser('theory', help='Add theory question')
+    theory_parser.add_argument('--belt', required=True, help='Belt rank (e.g., 1_dan, 2_dan)')
+    theory_parser.add_argument('--question', required=True, help='Question text in Danish')
+    theory_parser.add_argument('--correct', required=True, help='Correct answer in Danish')
+    theory_parser.add_argument('--incorrect', action='append', required=True,
+                              help='Incorrect answer in Danish (can be repeated 1-3 times)')
 
     args = parser.parse_args()
 
+    if not args.type:
+        parser.print_help()
+        return
+
+    # Validate belt rank
+    if not validate_belt_rank(args.belt):
+        print(f"❌ Error: Invalid belt rank '{args.belt}'")
+        print("Valid ranks: 10_kup, 9_kup, ..., 1_kup, 1_dan, 2_dan, 3_dan, ...")
+        return
+
+    # Path to questions.json
     script_dir = Path(__file__).parent
     json_path = script_dir / 'src' / 'data' / 'questions.json'
 
     if not json_path.exists():
         print(f"❌ Error: questions.json not found at {json_path}")
-        return 1
+        return
 
-    # Validate belt rank
-    valid_belts = ['10_kup', '9_kup', '8_kup', '7_kup', '6_kup', '5_kup',
-                   '4_kup', '3_kup', '2_kup', '1_kup', '1_dan', '2_dan', '3_dan']
-    if args.belt not in valid_belts:
-        print(f"❌ Error: Invalid belt rank '{args.belt}'")
-        print(f"Valid options: {', '.join(valid_belts)}")
-        return 1
+    # Load data
+    data = load_questions(json_path)
 
-    # Validate category
-    valid_categories = ['stances', 'hand_techniques', 'leg_techniques',
-                       'theory_terms', 'miscellaneous']
-    if args.category not in valid_categories:
-        print(f"❌ Error: Invalid category '{args.category}'")
-        print(f"Valid options: {', '.join(valid_categories)}")
-        return 1
+    # Add question based on type
+    if args.type == 'vocab':
+        if not validate_category(args.category):
+            print(f"❌ Error: Invalid category '{args.category}'")
+            print("Valid categories: stances, hand_techniques, leg_techniques, theory_terms, miscellaneous")
+            return
 
-    # Load questions.json
-    with open(json_path, 'r', encoding='utf-8') as f:
-        data = json.load(f)
+        data = add_vocabulary_question(
+            data, args.belt, args.category,
+            args.korean, args.danish, args.english
+        )
 
-    # Add new question
-    question_id, new_question = add_vocabulary_question(
-        data,
-        belt_rank=args.belt,
-        category=args.category,
-        korean=args.korean,
-        danish=args.danish,
-        english=args.english
-    )
+    elif args.type == 'theory':
+        if len(args.incorrect) < 1 or len(args.incorrect) > 3:
+            print(f"❌ Error: Must provide 1-3 incorrect answers (got {len(args.incorrect)})")
+            return
 
-    print(f"{'[DRY RUN] ' if args.dry_run else ''}New question:")
-    print(f"  ID: {question_id}")
-    print(f"  Belt: {args.belt}")
-    print(f"  Category: {args.category}")
-    print(f"  Korean: {args.korean}")
-    print(f"  Danish: {args.danish}")
-    print(f"  English: {args.english}")
+        data = add_theory_question(
+            data, args.belt, args.question,
+            args.correct, args.incorrect
+        )
 
-    if args.dry_run:
-        print(f"\n✓ Dry run complete. No changes saved.")
-        return 0
-
-    # Save updated questions.json
-    with open(json_path, 'w', encoding='utf-8') as f:
-        json.dump(data, f, ensure_ascii=False, indent=2)
-
-    print(f"\n✅ Successfully added question to questions.json")
-    print(f"Total vocabulary questions: {len(data['vocabularyQuestions'])}")
-
-    return 0
+    # Save updated data
+    save_questions(json_path, data)
+    print(f"\n✓ questions.json updated successfully")
 
 
 if __name__ == '__main__':
-    exit(main())
+    main()
