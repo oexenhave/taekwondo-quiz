@@ -31,12 +31,13 @@ A Progressive Web App (PWA) quiz application for Taekwondo students to practice 
 
 ### Data Source
 Complete dataset in `questions.json`:
-- **217 vocabulary questions** across all belt ranks (10. kup → 3. dan)
-- **44 theory questions** (1.-3. dan)
+- **269 vocabulary questions** across all belt ranks (10. kup → 3. dan)
+- **39 theory questions** (1.-3. dan)
 - All vocabulary includes Korean, Danish, and English translations
 - Theory questions in Danish (prepared for English)
+- Complete coverage of 10. kup through 1. kup (203 questions)
 
-To regenerate or update the dataset, run: `python3 convert_xml_to_json.py`
+Master source files are in `roskilde-source/*.md` with ID mappings to questions.json.
 
 ## JSON Data Model
 
@@ -207,13 +208,68 @@ refactor: extract answer generation to separate utility
 
 ## Development Commands
 
-TBD - Will be added as the project scaffolding is created.
+### Core Commands
+```bash
+npm install              # Install dependencies
+npm run dev             # Start development server
+npm run build           # Build for production
+npm run preview         # Preview production build
+npm run lint            # Run ESLint
+```
 
-Expected:
-- `npm install` - Install dependencies
-- `npm run dev` - Start development server
-- `npm run build` - Build for production
-- `npm run preview` - Preview production build
+### Version Management
+```bash
+npm run version-bump    # Increment major version (1→2→3)
+```
+
+**Version System:**
+- Major version only (simple incrementing: v1, v2, v3...)
+- Build date auto-generated at build time
+- Displayed below Start button as: `v1 • Built: 2025-11-09`
+- Helps verify PWA updates are deployed correctly
+
+**Workflow:**
+1. Make changes to the app
+2. Run `npm run version-bump` before deploying
+3. Run `npm run deploy` (auto-builds with new version)
+
+### Deployment
+```bash
+npm run deploy          # Build and deploy to GitHub Pages
+```
+
+### Question Management Scripts
+
+**Add New Question:**
+```bash
+python3 add_question.py --belt BELT_RANK --category CATEGORY \
+  --korean "KOREAN" --danish "DANISH" --english "ENGLISH"
+```
+
+**Example:**
+```bash
+python3 add_question.py --belt 8_kup --category theory_terms \
+  --korean "Tasut" --danish "Fem (5)" --english "Five (5)"
+```
+
+**Valid Parameters:**
+- Belt ranks: `10_kup`, `9_kup`, `8_kup`, `7_kup`, `6_kup`, `5_kup`, `4_kup`, `3_kup`, `2_kup`, `1_kup`, `1_dan`, `2_dan`, `3_dan`
+- Categories: `stances`, `hand_techniques`, `leg_techniques`, `theory_terms`, `miscellaneous`
+
+**Match Korean IDs:**
+```bash
+python3 match_korean_ids.py    # Updates markdown files with IDs from questions.json
+```
+
+**Fix Belt Ranks:**
+```bash
+python3 fix_belt_ranks.py      # Corrects belt ranks based on markdown files (master source)
+```
+
+**Validate Unique IDs:**
+```bash
+python3 validate_unique_ids.py # Ensures all question IDs are unique
+```
 
 ## Key Implementation Notes
 
@@ -223,13 +279,43 @@ Expected:
 - Responsive design (mobile-first)
 - Touch-friendly UI (large tap targets)
 
+### Branding
+- **Logo**: `public/rtk-logo.jpg` - Displayed above title on Setup screen
+- **App Name**: "Seung Li Taekwondo Quiz" (configurable in vite.config.js manifest)
+- Logo centered, max-width 200px, responsive scaling
+
 ### Quiz Logic
 - **Vocabulary questions**: Randomly alternate between ko→da and da→ko directions for variety
 - **Theory questions**: Display in user's language (Danish in MVP)
 - Shuffle answer options (don't always put correct answer in same position)
 - Track score during session (temporary, no persistence in MVP)
-- Show sprinkle/confetti animation on correct answers (consider libraries like `react-confetti` or `canvas-confetti`)
+- Show sprinkle/confetti animation on correct answers using `canvas-confetti`
 - Display final score/ranking after N questions completed
+
+### Question Selection Algorithm
+
+**Adaptive Distribution Strategy:**
+- Includes current belt level and ALL previous levels
+- Uses percentage-based distribution:
+  - **4+ previous levels**: 50% current, 30% level-1, 10% level-2, 5% level-3, 5% level-4
+  - **3 previous levels**: 60% current, 25% level-1, 10% level-2, 5% level-3
+  - **2 previous levels**: 60% current, 25% level-1, 15% level-2
+  - **1 previous level**: 70% current, 30% level-1
+  - **0 previous levels**: 100% current
+
+**Multi-Level Backfill:**
+If initial distribution doesn't meet requested count:
+1. Calculate shortage (requested - selected)
+2. Iteratively fill from all belt levels (current → level-1 → level-2 → ...)
+3. Take remaining available questions from each level
+4. Stop when requested count reached OR all levels exhausted
+5. Use Set-based tracking to prevent duplicates
+
+**Guarantees:**
+- Final count NEVER exceeds requested amount
+- May return fewer questions if insufficient available across all levels
+- No warning messages displayed to user
+- Prioritizes harder material (fills from current level first)
 
 ### Answer Pool Strategy
 

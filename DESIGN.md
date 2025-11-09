@@ -32,7 +32,7 @@ Setup Screen → Quiz Screen (N questions) → Results Screen
 ### Layout
 ```
 ┌─────────────────────────────┐
-│   Taekwondo Teori Quiz      │
+│   Seung Li Taekwondo Quiz   │
 ├─────────────────────────────┤
 │   Test til:                 │
 │   [Dropdown: 10. kup ▼]     │

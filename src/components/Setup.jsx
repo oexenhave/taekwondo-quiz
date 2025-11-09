@@ -47,6 +47,19 @@ export default function Setup({ metadata, onStartQuiz }) {
     >
       <Card sx={{ width: { xs: '100%', sm: 600 } }}>
         <CardContent sx={{ p: 4 }}>
+          {/* Logo */}
+          <Box sx={{ display: 'flex', justifyContent: 'center', mb: 3 }}>
+            <img
+              src="/rtk-logo.jpg"
+              alt="Roskilde Taekwondo Logo"
+              style={{
+                maxWidth: '200px',
+                width: '100%',
+                height: 'auto'
+              }}
+            />
+          </Box>
+
           <Typography variant="h4" component="h1" gutterBottom align="center">
             Taekwondo Teori Quiz
           </Typography>
@@ -113,6 +126,16 @@ export default function Setup({ metadata, onStartQuiz }) {
           >
             Start test
           </Button>
+
+          {/* Version Info */}
+          <Typography
+            variant="caption"
+            color="text.secondary"
+            align="center"
+            sx={{ display: 'block', mt: 2 }}
+          >
+            v{__APP_VERSION__} • Built: {__BUILD_DATE__}
+          </Typography>
         </CardContent>
       </Card>
     </Box>
