@@ -19,7 +19,6 @@ export function useQuiz(questionsData) {
   const [score, setScore] = useState(0);
   const [answered, setAnswered] = useState(false);
   const [selectedAnswer, setSelectedAnswer] = useState(null);
-  const [warning, setWarning] = useState(null);
 
   /**
    * Start quiz with selected configuration
@@ -28,11 +27,10 @@ export function useQuiz(questionsData) {
     setConfig({ beltRank, questionCount });
 
     // Select questions based on algorithm
-    const { questions: selectedQuestions, warning: selectionWarning } =
+    const { questions: selectedQuestions } =
       selectQuestions(questionsData, beltRank, questionCount);
 
     setQuestions(selectedQuestions);
-    setWarning(selectionWarning);
 
     // Format questions with randomized answers
     const formatted = selectedQuestions.map(q =>
@@ -90,7 +88,6 @@ export function useQuiz(questionsData) {
     setScore(0);
     setAnswered(false);
     setSelectedAnswer(null);
-    setWarning(null);
   };
 
   /**
@@ -151,7 +148,6 @@ export function useQuiz(questionsData) {
     config,
     answered,
     selectedAnswer,
-    warning,
 
     // Actions
     startQuiz,

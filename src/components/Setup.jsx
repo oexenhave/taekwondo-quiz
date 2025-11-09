@@ -13,14 +13,13 @@ import {
   FormControl,
   InputLabel,
   Button,
-  ButtonGroup,
-  Alert
+  ButtonGroup
 } from '@mui/material';
 import { getBeltRankOptions } from '../utils/quizLogic';
 
 const QUESTION_COUNTS = [10, 25, 50, 100];
 
-export default function Setup({ metadata, onStartQuiz, warning }) {
+export default function Setup({ metadata, onStartQuiz }) {
   const [selectedBeltRank, setSelectedBeltRank] = useState('');
   const [selectedQuestionCount, setSelectedQuestionCount] = useState(null);
 
@@ -55,12 +54,6 @@ export default function Setup({ metadata, onStartQuiz, warning }) {
           <Typography variant="body1" color="text.secondary" paragraph align="center">
             Vælg dit niveau og antal spørgsmål
           </Typography>
-
-          {warning && (
-            <Alert severity="warning" sx={{ mb: 3 }}>
-              {warning}
-            </Alert>
-          )}
 
           {/* Belt Rank Selection */}
           <FormControl fullWidth sx={{ mb: 3 }}>

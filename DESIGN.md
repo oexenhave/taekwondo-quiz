@@ -73,13 +73,17 @@ Questions are selected from current and previous belt levels using adaptive perc
 - **Testing 8_kup**: 60% from 8_kup, 25% from 9_kup, 15% from 10_kup
 - **Testing 5_kup (20 questions)**: 10 from 5_kup, 6 from 6_kup, 2 from 7_kup, 1 from 8_kup, 1 from 9_kup
 
-### Top-Up Logic
+### Multi-Level Backfill Logic
 1. Calculate distribution using percentages (round down)
 2. Sum allocated questions
-3. **If total < requested**: Add difference to current level
-4. **If insufficient questions available**: Continue without top-up, inform user
+3. **If total < requested**: Progressively fill from all belt levels
+   - Start from current level
+   - Move to level -1, level -2, etc.
+   - Take remaining available questions from each level
+   - Stop when requested count reached OR all levels exhausted
+4. Ensure no duplicates (Set-based tracking)
 
-**Critical**: Final question count MUST match selected value exactly - unless option 4 is hit.
+**Critical**: Final question count NEVER exceeds requested value. May be less if insufficient questions available across all levels.
 
 ---
 
@@ -277,7 +281,9 @@ Displayed as-is from metadata: "10. kup", "9. kup", etc.
 ## 8. Edge Cases to Handle
 
 1. **Insufficient questions**: If requested count > available questions
-   - Show warning message to user
+   - Multi-level backfill attempts to fill from all belt levels
+   - User receives maximum available questions (≤ requested)
+   - No warning displayed
 
 2. **No previous levels**: First belt rank (10_kup)
    - Use 100% from current level

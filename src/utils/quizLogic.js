@@ -149,38 +149,45 @@ export function selectQuestions(questionsData, selectedBeltRank, totalQuestions)
     actualCounts.push(selected.length);
   }
 
-  // Top-up logic: if we have fewer questions than requested, try to add more from current level
+  // Enhanced top-up logic: backfill from all levels (current -> down) if insufficient questions
   if (selectedQuestions.length < totalQuestions) {
-    const currentRank = beltRanks[0];
-    const currentLevelQuestions = [
-      ...groupedQuestions[currentRank].vocabulary,
-      ...groupedQuestions[currentRank].theory
-    ];
-
-    // Remove already selected questions
     const alreadySelectedIds = new Set(selectedQuestions.map(q => q.id));
-    const remainingQuestions = currentLevelQuestions.filter(q => !alreadySelectedIds.has(q.id));
+    let shortage = totalQuestions - selectedQuestions.length;
 
-    // Calculate how many more we need
-    const needed = totalQuestions - selectedQuestions.length;
-    const shuffled = shuffleArray(remainingQuestions);
-    const additional = shuffled.slice(0, needed);
+    // Iterate through all belt ranks from current level downward
+    for (let i = 0; i < beltRanks.length && shortage > 0; i++) {
+      const rank = beltRanks[i];
 
-    selectedQuestions.push(...additional);
+      // Get all available questions from this level
+      const availableQuestions = [
+        ...groupedQuestions[rank].vocabulary,
+        ...groupedQuestions[rank].theory
+      ];
+
+      // Filter out already selected questions
+      const remainingQuestions = availableQuestions.filter(q => !alreadySelectedIds.has(q.id));
+
+      if (remainingQuestions.length > 0) {
+        // Take as many as needed from this level
+        const toTake = Math.min(remainingQuestions.length, shortage);
+        const shuffled = shuffleArray(remainingQuestions);
+        const additional = shuffled.slice(0, toTake);
+
+        // Add to selected questions and mark as selected
+        selectedQuestions.push(...additional);
+        additional.forEach(q => alreadySelectedIds.add(q.id));
+
+        shortage -= additional.length;
+      }
+    }
   }
 
   // Final shuffle to mix vocabulary and theory questions
   selectedQuestions = shuffleArray(selectedQuestions);
 
-  // Check if we have enough questions
-  let warning = null;
-  if (selectedQuestions.length < totalQuestions) {
-    warning = `Kun ${selectedQuestions.length} spørgsmål tilgængelige for dette niveau (du valgte ${totalQuestions})`;
-  }
-
   return {
     questions: selectedQuestions,
-    warning
+    warning: null
   };
 }
 

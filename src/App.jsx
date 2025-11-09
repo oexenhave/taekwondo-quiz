@@ -35,7 +35,6 @@ function App() {
         <Setup
           metadata={questionsData.metadata}
           onStartQuiz={quiz.startQuiz}
-          warning={quiz.warning}
         />
       )}
 
