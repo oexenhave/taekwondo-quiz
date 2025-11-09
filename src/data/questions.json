@@ -98,7 +98,7 @@
       "beltRank": "10_kup",
       "category": "stances",
       "translations": {
-        "ko": "Dwichuk moa seogi",
+        "ko": "Dwichook moa seogi",
         "da": "Stand med samlede hæle",
         "en": "Heels together stance"
       },
@@ -128,7 +128,7 @@
       "beltRank": "10_kup",
       "category": "stances",
       "translations": {
-        "ko": "Apkubi",
+        "ko": "Apkoobi",
         "da": "Lang stand",
         "en": "Long stance"
       },
@@ -188,7 +188,7 @@
       "beltRank": "10_kup",
       "category": "stances",
       "translations": {
-        "ko": "Gibon junbi seogi",
+        "ko": "Gibon joonbi seogi",
         "da": "Standard klar stand",
         "en": "Standard ready stance"
       },
@@ -338,7 +338,7 @@
       "beltRank": "10_kup",
       "category": "leg_techniques",
       "translations": {
-        "ko": "Apchagi",
+        "ko": "Ap chagi",
         "da": "Front spark",
         "en": "Front kick"
       },
@@ -379,8 +379,8 @@
       }
     },
     {
-      "id": "vocab-10_kup-leg_techniques-006",
-      "beltRank": "10_kup",
+      "id": "vocab-9_kup-leg_techniques-006",
+      "beltRank": "9_kup",
       "category": "leg_techniques",
       "translations": {
         "ko": "Baldeung dollyo chagi",
@@ -563,7 +563,7 @@
       "beltRank": "10_kup",
       "category": "theory_terms",
       "translations": {
-        "ko": "Junbi",
+        "ko": "joonbi",
         "da": "Klar",
         "en": "Ready"
       },
@@ -593,7 +593,7 @@
       "beltRank": "10_kup",
       "category": "theory_terms",
       "translations": {
-        "ko": "Dwiro dora",
+        "ko": "Dirro dorra",
         "da": "Vend 180 grader",
         "en": "Turn 180 degrees"
       },
@@ -859,11 +859,11 @@
       }
     },
     {
-      "id": "vocab-9_kup-leg_techniques-008",
-      "beltRank": "9_kup",
+      "id": "vocab-8_kup-leg_techniques-008",
+      "beltRank": "8_kup",
       "category": "leg_techniques",
       "translations": {
-        "ko": "Apchuk dollyo chagi",
+        "ko": "Apchook dollyo chagi",
         "da": "Cirkelspark med fodballe",
         "en": "Roundhouse kick with ball of foot"
       },
@@ -979,8 +979,8 @@
       }
     },
     {
-      "id": "vocab-9_kup-theory_terms-031",
-      "beltRank": "9_kup",
+      "id": "vocab-4_kup-theory_terms-031",
+      "beltRank": "4_kup",
       "category": "theory_terms",
       "translations": {
         "ko": "Geodeureo",
@@ -994,8 +994,8 @@
       }
     },
     {
-      "id": "vocab-9_kup-theory_terms-032",
-      "beltRank": "9_kup",
+      "id": "vocab-7_kup-theory_terms-032",
+      "beltRank": "7_kup",
       "category": "theory_terms",
       "translations": {
         "ko": "Dubeon",
@@ -1103,7 +1103,7 @@
       "beltRank": "8_kup",
       "category": "stances",
       "translations": {
-        "ko": "Dwitgubi",
+        "ko": "Dwit koobi",
         "da": "Baglæns stand (L-stand)",
         "en": "Back stance (L-stance)"
       },
@@ -1114,8 +1114,8 @@
       }
     },
     {
-      "id": "vocab-8_kup-hand_techniques-015",
-      "beltRank": "8_kup",
+      "id": "vocab-6_kup-hand_techniques-015",
+      "beltRank": "6_kup",
       "category": "hand_techniques",
       "translations": {
         "ko": "Sonnal momtong makki",
@@ -1129,8 +1129,8 @@
       }
     },
     {
-      "id": "vocab-8_kup-hand_techniques-016",
-      "beltRank": "8_kup",
+      "id": "vocab-2_kup-hand_techniques-016",
+      "beltRank": "2_kup",
       "category": "hand_techniques",
       "translations": {
         "ko": "Sonnal arae makki",
@@ -1159,8 +1159,8 @@
       }
     },
     {
-      "id": "vocab-8_kup-hand_techniques-018",
-      "beltRank": "8_kup",
+      "id": "vocab-1_kup-hand_techniques-018",
+      "beltRank": "1_kup",
       "category": "hand_techniques",
       "translations": {
         "ko": "Hansonnal arae makki",
@@ -1189,8 +1189,8 @@
       }
     },
     {
-      "id": "vocab-8_kup-hand_techniques-020",
-      "beltRank": "8_kup",
+      "id": "vocab-2_kup-hand_techniques-020",
+      "beltRank": "2_kup",
       "category": "hand_techniques",
       "translations": {
         "ko": "Geodeureo momtong makki",
@@ -1204,8 +1204,8 @@
       }
     },
     {
-      "id": "vocab-8_kup-hand_techniques-021",
-      "beltRank": "8_kup",
+      "id": "vocab-2_kup-hand_techniques-021",
+      "beltRank": "2_kup",
       "category": "hand_techniques",
       "translations": {
         "ko": "Geodeureo arae makki",
@@ -1219,8 +1219,8 @@
       }
     },
     {
-      "id": "vocab-8_kup-hand_techniques-022",
-      "beltRank": "8_kup",
+      "id": "vocab-7_kup-hand_techniques-022",
+      "beltRank": "7_kup",
       "category": "hand_techniques",
       "translations": {
         "ko": "Sonnal eolgul an chigi",
@@ -1328,7 +1328,7 @@
       "beltRank": "8_kup",
       "category": "theory_terms",
       "translations": {
-        "ko": "Apchuk",
+        "ko": "Apchook",
         "da": "Fodballe",
         "en": "Ball of foot"
       },
@@ -1339,11 +1339,11 @@
       }
     },
     {
-      "id": "vocab-8_kup-theory_terms-045",
-      "beltRank": "8_kup",
+      "id": "vocab-6_kup-theory_terms-045",
+      "beltRank": "6_kup",
       "category": "theory_terms",
       "translations": {
-        "ko": "Jebipum",
+        "ko": "Jebi pum",
         "da": "Svaleteknik",
         "en": "Swallow technique"
       },
@@ -1354,8 +1354,8 @@
       }
     },
     {
-      "id": "vocab-8_kup-theory_terms-046",
-      "beltRank": "8_kup",
+      "id": "vocab-6_kup-theory_terms-046",
+      "beltRank": "6_kup",
       "category": "theory_terms",
       "translations": {
         "ko": "Mok",
@@ -1384,11 +1384,11 @@
       }
     },
     {
-      "id": "vocab-7_kup-hand_techniques-023",
-      "beltRank": "7_kup",
+      "id": "vocab-6_kup-hand_techniques-023",
+      "beltRank": "6_kup",
       "category": "hand_techniques",
       "translations": {
-        "ko": "Jebipum mok chigi",
+        "ko": "Jebi pum mok chigi",
         "da": "Svaleteknik slag mod hals",
         "en": "Swallow technique strike to neck"
       },
@@ -1399,8 +1399,8 @@
       }
     },
     {
-      "id": "vocab-7_kup-hand_techniques-024",
-      "beltRank": "7_kup",
+      "id": "vocab-6_kup-hand_techniques-024",
+      "beltRank": "6_kup",
       "category": "hand_techniques",
       "translations": {
         "ko": "Batangson momtong nulleo makki",
@@ -1414,8 +1414,8 @@
       }
     },
     {
-      "id": "vocab-7_kup-hand_techniques-025",
-      "beltRank": "7_kup",
+      "id": "vocab-6_kup-hand_techniques-025",
+      "beltRank": "6_kup",
       "category": "hand_techniques",
       "translations": {
         "ko": "Deung jumeok ap chigi",
@@ -1429,11 +1429,11 @@
       }
     },
     {
-      "id": "vocab-7_kup-hand_techniques-026",
-      "beltRank": "7_kup",
+      "id": "vocab-6_kup-hand_techniques-026",
+      "beltRank": "6_kup",
       "category": "hand_techniques",
       "translations": {
-        "ko": "Pyeonsonkeut seweo chireugi",
+        "ko": "Pyeonsonkkeut sewo jireugi",
         "da": "Fingerstik med lodret håndstilling",
         "en": "Finger thrust with vertical hand position"
       },
@@ -1504,8 +1504,8 @@
       }
     },
     {
-      "id": "vocab-7_kup-theory_terms-048",
-      "beltRank": "7_kup",
+      "id": "vocab-6_kup-theory_terms-048",
+      "beltRank": "6_kup",
       "category": "theory_terms",
       "translations": {
         "ko": "Deung jumeok",
@@ -1534,8 +1534,8 @@
       }
     },
     {
-      "id": "vocab-7_kup-theory_terms-050",
-      "beltRank": "7_kup",
+      "id": "vocab-6_kup-theory_terms-050",
+      "beltRank": "6_kup",
       "category": "theory_terms",
       "translations": {
         "ko": "Batangson",
@@ -1549,8 +1549,8 @@
       }
     },
     {
-      "id": "vocab-7_kup-theory_terms-051",
-      "beltRank": "7_kup",
+      "id": "vocab-6_kup-theory_terms-051",
+      "beltRank": "6_kup",
       "category": "theory_terms",
       "translations": {
         "ko": "Sondeung",
@@ -1564,8 +1564,8 @@
       }
     },
     {
-      "id": "vocab-7_kup-theory_terms-052",
-      "beltRank": "7_kup",
+      "id": "vocab-6_kup-theory_terms-052",
+      "beltRank": "6_kup",
       "category": "theory_terms",
       "translations": {
         "ko": "Sonkeut",
@@ -1624,8 +1624,8 @@
       }
     },
     {
-      "id": "vocab-7_kup-theory_terms-056",
-      "beltRank": "7_kup",
+      "id": "vocab-6_kup-theory_terms-056",
+      "beltRank": "6_kup",
       "category": "theory_terms",
       "translations": {
         "ko": "Chireugi",
@@ -1684,8 +1684,8 @@
       }
     },
     {
-      "id": "vocab-6_kup-stances-011",
-      "beltRank": "6_kup",
+      "id": "vocab-5_kup-stances-011",
+      "beltRank": "5_kup",
       "category": "stances",
       "translations": {
         "ko": "Oreun seogi",
@@ -1699,8 +1699,8 @@
       }
     },
     {
-      "id": "vocab-6_kup-stances-012",
-      "beltRank": "6_kup",
+      "id": "vocab-5_kup-stances-012",
+      "beltRank": "5_kup",
       "category": "stances",
       "translations": {
         "ko": "Oen seogi",
@@ -1744,11 +1744,11 @@
       }
     },
     {
-      "id": "vocab-6_kup-hand_techniques-028",
-      "beltRank": "6_kup",
+      "id": "vocab-5_kup-hand_techniques-028",
+      "beltRank": "5_kup",
       "category": "hand_techniques",
       "translations": {
-        "ko": "Palkup dollyo chigi",
+        "ko": "Palgup dollyo chigi",
         "da": "Cirkelslag med albue",
         "en": "Circular elbow strike"
       },
@@ -1763,7 +1763,7 @@
       "beltRank": "6_kup",
       "category": "hand_techniques",
       "translations": {
-        "ko": "Palkup geodeureo dollyo chigi",
+        "ko": "Palgup geodeureo dollyo chigi",
         "da": "Cirkelslag med albue med støtte",
         "en": "Circular elbow strike with support"
       },
@@ -1774,11 +1774,11 @@
       }
     },
     {
-      "id": "vocab-6_kup-hand_techniques-030",
-      "beltRank": "6_kup",
+      "id": "vocab-5_kup-hand_techniques-030",
+      "beltRank": "5_kup",
       "category": "hand_techniques",
       "translations": {
-        "ko": "Palkup pyojeok chigi",
+        "ko": "Palgup pyojeok chigi",
         "da": "Pletslag med albue",
         "en": "Target elbow strike"
       },
@@ -1853,7 +1853,7 @@
       "beltRank": "6_kup",
       "category": "leg_techniques",
       "translations": {
-        "ko": "Bbeodeo chagi",
+        "ko": "Beodeo chagi",
         "da": "Bøje-stræk spark hvor der rammes med underside af hæl",
         "en": "Bend-stretch kick striking with bottom of heel"
       },
@@ -1894,8 +1894,8 @@
       }
     },
     {
-      "id": "vocab-6_kup-theory_terms-060",
-      "beltRank": "6_kup",
+      "id": "vocab-5_kup-theory_terms-060",
+      "beltRank": "5_kup",
       "category": "theory_terms",
       "translations": {
         "ko": "Me jumeok",
@@ -1909,11 +1909,11 @@
       }
     },
     {
-      "id": "vocab-6_kup-theory_terms-061",
-      "beltRank": "6_kup",
+      "id": "vocab-5_kup-theory_terms-061",
+      "beltRank": "5_kup",
       "category": "theory_terms",
       "translations": {
-        "ko": "Palkup",
+        "ko": "Palgup",
         "da": "Albue",
         "en": "Elbow"
       },
@@ -1924,8 +1924,8 @@
       }
     },
     {
-      "id": "vocab-6_kup-theory_terms-062",
-      "beltRank": "6_kup",
+      "id": "vocab-7_kup-theory_terms-062",
+      "beltRank": "7_kup",
       "category": "theory_terms",
       "translations": {
         "ko": "Dari",
@@ -1954,8 +1954,8 @@
       }
     },
     {
-      "id": "vocab-6_kup-theory_terms-064",
-      "beltRank": "6_kup",
+      "id": "vocab-5_kup-theory_terms-064",
+      "beltRank": "5_kup",
       "category": "theory_terms",
       "translations": {
         "ko": "Pyojeok",
@@ -1988,7 +1988,7 @@
       "beltRank": "5_kup",
       "category": "stances",
       "translations": {
-        "ko": "Apchuk moa seogi",
+        "ko": "Apchook moa seogi",
         "da": "Samlede tæer stand",
         "en": "Ball of foot together stance"
       },
@@ -2014,8 +2014,8 @@
       }
     },
     {
-      "id": "vocab-5_kup-hand_techniques-033",
-      "beltRank": "5_kup",
+      "id": "vocab-4_kup-hand_techniques-033",
+      "beltRank": "4_kup",
       "category": "hand_techniques",
       "translations": {
         "ko": "Hansonnal eolgul biteureo makki",
@@ -2029,8 +2029,8 @@
       }
     },
     {
-      "id": "vocab-5_kup-hand_techniques-034",
-      "beltRank": "5_kup",
+      "id": "vocab-4_kup-hand_techniques-034",
+      "beltRank": "4_kup",
       "category": "hand_techniques",
       "translations": {
         "ko": "Eolgul bakkat makki",
@@ -2044,8 +2044,8 @@
       }
     },
     {
-      "id": "vocab-5_kup-hand_techniques-035",
-      "beltRank": "5_kup",
+      "id": "vocab-4_kup-hand_techniques-035",
+      "beltRank": "4_kup",
       "category": "hand_techniques",
       "translations": {
         "ko": "Batangson momtong makki",
@@ -2059,8 +2059,8 @@
       }
     },
     {
-      "id": "vocab-5_kup-hand_techniques-036",
-      "beltRank": "5_kup",
+      "id": "vocab-4_kup-hand_techniques-036",
+      "beltRank": "4_kup",
       "category": "hand_techniques",
       "translations": {
         "ko": "Batangson momtong an makki",
@@ -2074,11 +2074,11 @@
       }
     },
     {
-      "id": "vocab-5_kup-leg_techniques-018",
-      "beltRank": "5_kup",
+      "id": "vocab-4_kup-leg_techniques-018",
+      "beltRank": "4_kup",
       "category": "leg_techniques",
       "translations": {
-        "ko": "Naggeo chagi",
+        "ko": "Nakeo chagi",
         "da": "Krogspark",
         "en": "Hook kick"
       },
@@ -2213,7 +2213,7 @@
       "beltRank": "5_kup",
       "category": "theory_terms",
       "translations": {
-        "ko": "Dwitgumchi",
+        "ko": "Dwi kkumchi",
         "da": "Bagside af hæl",
         "en": "Back of heel"
       },
@@ -2239,8 +2239,8 @@
       }
     },
     {
-      "id": "vocab-4_kup-stances-017",
-      "beltRank": "4_kup",
+      "id": "vocab-3_kup-stances-017",
+      "beltRank": "3_kup",
       "category": "stances",
       "translations": {
         "ko": "Beom seogi",
@@ -2269,11 +2269,11 @@
       }
     },
     {
-      "id": "vocab-4_kup-stances-019",
-      "beltRank": "4_kup",
+      "id": "vocab-3_kup-stances-019",
+      "beltRank": "3_kup",
       "category": "stances",
       "translations": {
-        "ko": "Bo jumeok junbi seogi",
+        "ko": "Bo jumeok joonbi seogi",
         "da": "Dækket næve klarstand",
         "en": "Covered fist ready stance"
       },
@@ -2284,8 +2284,8 @@
       }
     },
     {
-      "id": "vocab-4_kup-hand_techniques-037",
-      "beltRank": "4_kup",
+      "id": "vocab-3_kup-hand_techniques-037",
+      "beltRank": "3_kup",
       "category": "hand_techniques",
       "translations": {
         "ko": "Batangson geodeureo momtong an makki",
@@ -2299,8 +2299,8 @@
       }
     },
     {
-      "id": "vocab-4_kup-hand_techniques-038",
-      "beltRank": "4_kup",
+      "id": "vocab-3_kup-hand_techniques-038",
+      "beltRank": "3_kup",
       "category": "hand_techniques",
       "translations": {
         "ko": "Eotgeoreo arae makki",
@@ -2329,8 +2329,8 @@
       }
     },
     {
-      "id": "vocab-4_kup-hand_techniques-040",
-      "beltRank": "4_kup",
+      "id": "vocab-3_kup-hand_techniques-040",
+      "beltRank": "3_kup",
       "category": "hand_techniques",
       "translations": {
         "ko": "Gawi makki",
@@ -2359,8 +2359,8 @@
       }
     },
     {
-      "id": "vocab-4_kup-hand_techniques-042",
-      "beltRank": "4_kup",
+      "id": "vocab-3_kup-hand_techniques-042",
+      "beltRank": "3_kup",
       "category": "hand_techniques",
       "translations": {
         "ko": "Du jumeok jecheo jireugi",
@@ -2374,8 +2374,8 @@
       }
     },
     {
-      "id": "vocab-4_kup-hand_techniques-043",
-      "beltRank": "4_kup",
+      "id": "vocab-3_kup-hand_techniques-043",
+      "beltRank": "3_kup",
       "category": "hand_techniques",
       "translations": {
         "ko": "Geodeureo deung jumeok eolgul ap chigi",
@@ -2404,8 +2404,8 @@
       }
     },
     {
-      "id": "vocab-4_kup-hand_techniques-045",
-      "beltRank": "4_kup",
+      "id": "vocab-3_kup-hand_techniques-045",
+      "beltRank": "3_kup",
       "category": "hand_techniques",
       "translations": {
         "ko": "Momtong hechyeo makki",
@@ -2509,8 +2509,8 @@
       }
     },
     {
-      "id": "vocab-4_kup-theory_terms-070",
-      "beltRank": "4_kup",
+      "id": "vocab-3_kup-theory_terms-070",
+      "beltRank": "3_kup",
       "category": "theory_terms",
       "translations": {
         "ko": "Du jumeok",
@@ -2524,8 +2524,8 @@
       }
     },
     {
-      "id": "vocab-4_kup-theory_terms-071",
-      "beltRank": "4_kup",
+      "id": "vocab-3_kup-theory_terms-071",
+      "beltRank": "3_kup",
       "category": "theory_terms",
       "translations": {
         "ko": "Bo jumeok",
@@ -2543,7 +2543,7 @@
       "beltRank": "4_kup",
       "category": "theory_terms",
       "translations": {
-        "ko": "Gom son",
+        "ko": "Gomson",
         "da": "Bjørnehånd",
         "en": "Bear hand"
       },
@@ -2614,8 +2614,8 @@
       }
     },
     {
-      "id": "vocab-3_kup-hand_techniques-047",
-      "beltRank": "3_kup",
+      "id": "vocab-2_kup-hand_techniques-047",
+      "beltRank": "2_kup",
       "category": "hand_techniques",
       "translations": {
         "ko": "Oesanteul makki",
@@ -2633,7 +2633,7 @@
       "beltRank": "3_kup",
       "category": "hand_techniques",
       "translations": {
-        "ko": "Danggyeo teok jireugi",
+        "ko": "Dangyeo teok jireugi",
         "da": "Trække med en hånd, slag mod hagen med den anden",
         "en": "Pull with one hand, strike to chin with other"
       },
@@ -2644,8 +2644,8 @@
       }
     },
     {
-      "id": "vocab-3_kup-leg_techniques-030",
-      "beltRank": "3_kup",
+      "id": "vocab-2_kup-leg_techniques-030",
+      "beltRank": "2_kup",
       "category": "leg_techniques",
       "translations": {
         "ko": "Dubal dangsang chagi",
@@ -2704,8 +2704,8 @@
       }
     },
     {
-      "id": "vocab-3_kup-theory_terms-078",
-      "beltRank": "3_kup",
+      "id": "vocab-2_kup-theory_terms-078",
+      "beltRank": "2_kup",
       "category": "theory_terms",
       "translations": {
         "ko": "Santeul",
@@ -2719,8 +2719,8 @@
       }
     },
     {
-      "id": "vocab-3_kup-theory_terms-079",
-      "beltRank": "3_kup",
+      "id": "vocab-2_kup-theory_terms-079",
+      "beltRank": "2_kup",
       "category": "theory_terms",
       "translations": {
         "ko": "Oesanteul",
@@ -2749,8 +2749,8 @@
       }
     },
     {
-      "id": "vocab-2_kup-hand_techniques-049",
-      "beltRank": "2_kup",
+      "id": "vocab-1_kup-hand_techniques-049",
+      "beltRank": "1_kup",
       "category": "hand_techniques",
       "translations": {
         "ko": "Pyojeok jireugi",
@@ -2768,7 +2768,7 @@
       "beltRank": "2_kup",
       "category": "hand_techniques",
       "translations": {
-        "ko": "Palkup naereyo chigi",
+        "ko": "Palgup naereyo chigi",
         "da": "Nedadgående albueslag",
         "en": "Downward elbow strike"
       },
@@ -2783,7 +2783,7 @@
       "beltRank": "2_kup",
       "category": "hand_techniques",
       "translations": {
-        "ko": "Palkup ollyo chigi",
+        "ko": "Palgup ollyeo chigi",
         "da": "Opadgående albueslag",
         "en": "Upward elbow strike"
       },
@@ -2933,7 +2933,7 @@
       "beltRank": "1_kup",
       "category": "stances",
       "translations": {
-        "ko": "Tong milgi junbi seogi",
+        "ko": "Tong milgi joonbi seogi",
         "da": "Skubbe beholder klar stand",
         "en": "Push barrel ready stance"
       },
@@ -2948,7 +2948,7 @@
       "beltRank": "1_kup",
       "category": "hand_techniques",
       "translations": {
-        "ko": "Palkup yeop chigi",
+        "ko": "Palgup yeop chigi",
         "da": "Sidelæns albueslag",
         "en": "Sideways elbow strike"
       },
@@ -2963,7 +2963,7 @@
       "beltRank": "1_kup",
       "category": "hand_techniques",
       "translations": {
-        "ko": "Palkup geodeureo yeop chigi",
+        "ko": "Palgup geodeureo yeop chigi",
         "da": "Sidelæns albueslag med støtte",
         "en": "Sideways elbow strike with support"
       },
@@ -3053,7 +3053,7 @@
       "beltRank": "1_kup",
       "category": "theory_terms",
       "translations": {
-        "ko": "Modum sonkeut",
+        "ko": "Modeum sonkeut",
         "da": "Alle fingerspidser samlede",
         "en": "All fingertips together"
       },
@@ -3083,7 +3083,7 @@
       "beltRank": "1_kup",
       "category": "theory_terms",
       "translations": {
-        "ko": "Ageumson",
+        "ko": "Agwison",
         "da": "Runding mellem tommel- og pegefinger",
         "en": "Arc between thumb and index finger"
       },
@@ -3278,7 +3278,7 @@
       "beltRank": "3_dan",
       "category": "hand_techniques",
       "translations": {
-        "ko": "Danggyo teok chigi",
+        "ko": "Dangyeo teok chigi",
         "da": "En hånd trækker og den anden udfører apchigi (deung joomeok)",
         "en": "One hand pulls and other performs forward strike (back fist)"
       },
@@ -3424,7 +3424,7 @@
       }
     },
     {
-      "id": "vocab-9kup-hand_techniques-001",
+      "id": "vocab-9_kup-hand_techniques-001",
       "beltRank": "9_kup",
       "category": "hand_techniques",
       "translations": {
@@ -3439,7 +3439,7 @@
       }
     },
     {
-      "id": "vocab-9kup-hand_techniques-002",
+      "id": "vocab-9_kup-hand_techniques-002",
       "beltRank": "9_kup",
       "category": "hand_techniques",
       "translations": {
@@ -3454,7 +3454,7 @@
       }
     },
     {
-      "id": "vocab-9kup-theory_terms-003",
+      "id": "vocab-9_kup-theory_terms-003",
       "beltRank": "9_kup",
       "category": "theory_terms",
       "translations": {
@@ -3469,7 +3469,7 @@
       }
     },
     {
-      "id": "vocab-9kup-theory_terms-004",
+      "id": "vocab-9_kup-theory_terms-004",
       "beltRank": "9_kup",
       "category": "theory_terms",
       "translations": {
@@ -3484,7 +3484,7 @@
       }
     },
     {
-      "id": "vocab-9kup-theory_terms-005",
+      "id": "vocab-9_kup-theory_terms-005",
       "beltRank": "9_kup",
       "category": "theory_terms",
       "translations": {
@@ -3499,7 +3499,7 @@
       }
     },
     {
-      "id": "vocab-9kup-theory_terms-006",
+      "id": "vocab-9_kup-theory_terms-006",
       "beltRank": "9_kup",
       "category": "theory_terms",
       "translations": {
@@ -3514,7 +3514,7 @@
       }
     },
     {
-      "id": "vocab-9kup-theory_terms-007",
+      "id": "vocab-9_kup-theory_terms-007",
       "beltRank": "9_kup",
       "category": "theory_terms",
       "translations": {
@@ -3529,13 +3529,583 @@
       }
     },
     {
-      "id": "vocab-9kup-theory_terms-008",
+      "id": "vocab-9_kup-theory_terms-008",
       "beltRank": "9_kup",
       "category": "theory_terms",
       "translations": {
         "ko": "Il",
         "da": "Første (1.)",
         "en": "First (1st)"
+      },
+      "incorrectAnswers": {
+        "da": [],
+        "ko": [],
+        "en": []
+      }
+    },
+    {
+      "id": "vocab-8_kup-theory_terms-048",
+      "beltRank": "8_kup",
+      "category": "theory_terms",
+      "translations": {
+        "ko": "Tasut",
+        "da": "Fem (5)",
+        "en": "Five (5)"
+      },
+      "incorrectAnswers": {
+        "da": [],
+        "ko": [],
+        "en": []
+      }
+    },
+    {
+      "id": "vocab-8_kup-theory_terms-049",
+      "beltRank": "8_kup",
+      "category": "theory_terms",
+      "translations": {
+        "ko": "Yi",
+        "da": "Anden (2.)",
+        "en": "Second (2nd)"
+      },
+      "incorrectAnswers": {
+        "da": [],
+        "ko": [],
+        "en": []
+      }
+    },
+    {
+      "id": "vocab-9_kup-theory_terms-039",
+      "beltRank": "9_kup",
+      "category": "theory_terms",
+      "translations": {
+        "ko": "Poom",
+        "da": "Grundteknik",
+        "en": "Basic technique"
+      },
+      "incorrectAnswers": {
+        "da": [],
+        "ko": [],
+        "en": []
+      }
+    },
+    {
+      "id": "vocab-7_kup-stances-001",
+      "beltRank": "7_kup",
+      "category": "stances",
+      "translations": {
+        "ko": "Na chooeo seogi",
+        "da": "Dyb stand",
+        "en": "Deep stance"
+      },
+      "incorrectAnswers": {
+        "da": [],
+        "ko": [],
+        "en": []
+      }
+    },
+    {
+      "id": "vocab-7_kup-stances-002",
+      "beltRank": "7_kup",
+      "category": "stances",
+      "translations": {
+        "ko": "Dwit koobi",
+        "da": "Sidestand",
+        "en": "Side stance"
+      },
+      "incorrectAnswers": {
+        "da": [],
+        "ko": [],
+        "en": []
+      }
+    },
+    {
+      "id": "vocab-7_kup-hand_techniques-028",
+      "beltRank": "7_kup",
+      "category": "hand_techniques",
+      "translations": {
+        "ko": "Hansonnal momtong bakat makki",
+        "da": "Enkelt knivhånds blokering",
+        "en": "Single knife hand block"
+      },
+      "incorrectAnswers": {
+        "da": [],
+        "ko": [],
+        "en": []
+      }
+    },
+    {
+      "id": "vocab-7_kup-hand_techniques-029",
+      "beltRank": "7_kup",
+      "category": "hand_techniques",
+      "translations": {
+        "ko": "Dubeon momtong jireugi",
+        "da": "Dobbelt slag",
+        "en": "Double punch"
+      },
+      "incorrectAnswers": {
+        "da": [],
+        "ko": [],
+        "en": []
+      }
+    },
+    {
+      "id": "vocab-7_kup-theory_terms-060",
+      "beltRank": "7_kup",
+      "category": "theory_terms",
+      "translations": {
+        "ko": "Yeoteot",
+        "da": "Seks (6)",
+        "en": "Six (6)"
+      },
+      "incorrectAnswers": {
+        "da": [],
+        "ko": [],
+        "en": []
+      }
+    },
+    {
+      "id": "vocab-7_kup-theory_terms-061",
+      "beltRank": "7_kup",
+      "category": "theory_terms",
+      "translations": {
+        "ko": "Shijak",
+        "da": "Begynd/start",
+        "en": "Begin/start"
+      },
+      "incorrectAnswers": {
+        "da": [],
+        "ko": [],
+        "en": []
+      }
+    },
+    {
+      "id": "vocab-7_kup-theory_terms-062",
+      "beltRank": "7_kup",
+      "category": "theory_terms",
+      "translations": {
+        "ko": "Kalyeo",
+        "da": "Stop/\"Break\"",
+        "en": "Stop/\"Break\""
+      },
+      "incorrectAnswers": {
+        "da": [],
+        "ko": [],
+        "en": []
+      }
+    },
+    {
+      "id": "vocab-7_kup-theory_terms-063",
+      "beltRank": "7_kup",
+      "category": "theory_terms",
+      "translations": {
+        "ko": "Gyesok",
+        "da": "Fortsæt",
+        "en": "Continue"
+      },
+      "incorrectAnswers": {
+        "da": [],
+        "ko": [],
+        "en": []
+      }
+    },
+    {
+      "id": "vocab-7_kup-theory_terms-064",
+      "beltRank": "7_kup",
+      "category": "theory_terms",
+      "translations": {
+        "ko": "Sam",
+        "da": "Tredje (3.)",
+        "en": "Third (3rd)"
+      },
+      "incorrectAnswers": {
+        "da": [],
+        "ko": [],
+        "en": []
+      }
+    },
+    {
+      "id": "vocab-7_kup-theory_terms-065",
+      "beltRank": "7_kup",
+      "category": "theory_terms",
+      "translations": {
+        "ko": "An cha makki",
+        "da": "Blokering med benet",
+        "en": "Leg block"
+      },
+      "incorrectAnswers": {
+        "da": [],
+        "ko": [],
+        "en": []
+      }
+    },
+    {
+      "id": "vocab-6_kup-theory_terms-066",
+      "beltRank": "6_kup",
+      "category": "theory_terms",
+      "translations": {
+        "ko": "Ilgop",
+        "da": "Syv (7)",
+        "en": "Seven (7)"
+      },
+      "incorrectAnswers": {
+        "da": [],
+        "ko": [],
+        "en": []
+      }
+    },
+    {
+      "id": "vocab-6_kup-theory_terms-067",
+      "beltRank": "6_kup",
+      "category": "theory_terms",
+      "translations": {
+        "ko": "Sewo jumeok",
+        "da": "Lodret håndstilling med knyttet hånd",
+        "en": "Vertical fist position"
+      },
+      "incorrectAnswers": {
+        "da": [],
+        "ko": [],
+        "en": []
+      }
+    },
+    {
+      "id": "vocab-6_kup-theory_terms-068",
+      "beltRank": "6_kup",
+      "category": "theory_terms",
+      "translations": {
+        "ko": "Pyeonsonkkeut",
+        "da": "Fingerstik",
+        "en": "Finger thrust"
+      },
+      "incorrectAnswers": {
+        "da": [],
+        "ko": [],
+        "en": []
+      }
+    },
+    {
+      "id": "vocab-6_kup-theory_terms-069",
+      "beltRank": "6_kup",
+      "category": "theory_terms",
+      "translations": {
+        "ko": "Sah",
+        "da": "Fjerde (4.)",
+        "en": "Fourth (4th)"
+      },
+      "incorrectAnswers": {
+        "da": [],
+        "ko": [],
+        "en": []
+      }
+    },
+    {
+      "id": "vocab-5_kup-hand_techniques-037",
+      "beltRank": "5_kup",
+      "category": "hand_techniques",
+      "translations": {
+        "ko": "Me jumeok naeryo chigi",
+        "da": "Nedadgående slag med ydersiden af knyttet hånd",
+        "en": "Downward strike with outer edge of fist"
+      },
+      "incorrectAnswers": {
+        "da": [],
+        "ko": [],
+        "en": []
+      }
+    },
+    {
+      "id": "vocab-5_kup-leg_techniques-026",
+      "beltRank": "5_kup",
+      "category": "leg_techniques",
+      "translations": {
+        "ko": "Gulleo chagi",
+        "da": "Trampe spark, hvor der steppes frem og sparkes med forreste ben",
+        "en": "Stepping kick with front leg"
+      },
+      "incorrectAnswers": {
+        "da": [],
+        "ko": [],
+        "en": []
+      }
+    },
+    {
+      "id": "vocab-5_kup-leg_techniques-027",
+      "beltRank": "5_kup",
+      "category": "leg_techniques",
+      "translations": {
+        "ko": "Mom dorra bakkat chagi",
+        "da": "Dreje kroppen og derefter udadgående spark",
+        "en": "Turn body and outward kick"
+      },
+      "incorrectAnswers": {
+        "da": [],
+        "ko": [],
+        "en": []
+      }
+    },
+    {
+      "id": "vocab-5_kup-theory_terms-069",
+      "beltRank": "5_kup",
+      "category": "theory_terms",
+      "translations": {
+        "ko": "Dwi kkumchi",
+        "da": "Hæl",
+        "en": "Heel"
+      },
+      "incorrectAnswers": {
+        "da": [],
+        "ko": [],
+        "en": []
+      }
+    },
+    {
+      "id": "vocab-5_kup-theory_terms-070",
+      "beltRank": "5_kup",
+      "category": "theory_terms",
+      "translations": {
+        "ko": "Yeodeol",
+        "da": "Otte (8)",
+        "en": "Eight (8)"
+      },
+      "incorrectAnswers": {
+        "da": [],
+        "ko": [],
+        "en": []
+      }
+    },
+    {
+      "id": "vocab-5_kup-theory_terms-071",
+      "beltRank": "5_kup",
+      "category": "theory_terms",
+      "translations": {
+        "ko": "Mit palmok",
+        "da": "Undersiden af underarm",
+        "en": "Underside of forearm"
+      },
+      "incorrectAnswers": {
+        "da": [],
+        "ko": [],
+        "en": []
+      }
+    },
+    {
+      "id": "vocab-5_kup-theory_terms-072",
+      "beltRank": "5_kup",
+      "category": "theory_terms",
+      "translations": {
+        "ko": "Oh",
+        "da": "Femte (5.)",
+        "en": "Fifth (5th)"
+      },
+      "incorrectAnswers": {
+        "da": [],
+        "ko": [],
+        "en": []
+      }
+    },
+    {
+      "id": "vocab-4_kup-theory_terms-075",
+      "beltRank": "4_kup",
+      "category": "theory_terms",
+      "translations": {
+        "ko": "Ahop",
+        "da": "Ni (9)",
+        "en": "Nine (9)"
+      },
+      "incorrectAnswers": {
+        "da": [],
+        "ko": [],
+        "en": []
+      }
+    },
+    {
+      "id": "vocab-4_kup-theory_terms-076",
+      "beltRank": "4_kup",
+      "category": "theory_terms",
+      "translations": {
+        "ko": "Yeol",
+        "da": "Ti (10)",
+        "en": "Ten (10)"
+      },
+      "incorrectAnswers": {
+        "da": [],
+        "ko": [],
+        "en": []
+      }
+    },
+    {
+      "id": "vocab-3_kup-hand_techniques-049",
+      "beltRank": "3_kup",
+      "category": "hand_techniques",
+      "translations": {
+        "ko": "Eolgul bakkat chigi",
+        "da": "Udadgående slag",
+        "en": "Outward strike"
+      },
+      "incorrectAnswers": {
+        "da": [],
+        "ko": [],
+        "en": []
+      }
+    },
+    {
+      "id": "vocab-3_kup-theory_terms-080",
+      "beltRank": "3_kup",
+      "category": "theory_terms",
+      "translations": {
+        "ko": "Chill",
+        "da": "Syvende (7.)",
+        "en": "Seventh (7th)"
+      },
+      "incorrectAnswers": {
+        "da": [],
+        "ko": [],
+        "en": []
+      }
+    },
+    {
+      "id": "vocab-2_kup-hand_techniques-052",
+      "beltRank": "2_kup",
+      "category": "hand_techniques",
+      "translations": {
+        "ko": "Dangyeo teok jireugi",
+        "da": "Træk med en hånd og udfør slag med den anden hånd mod hage",
+        "en": "Pull with one hand and strike to chin with the other hand"
+      },
+      "incorrectAnswers": {
+        "da": [],
+        "ko": [],
+        "en": []
+      }
+    },
+    {
+      "id": "vocab-2_kup-theory_terms-086",
+      "beltRank": "2_kup",
+      "category": "theory_terms",
+      "translations": {
+        "ko": "Han son keut",
+        "da": "Enkelt-fingerstik",
+        "en": "Single finger thrust"
+      },
+      "incorrectAnswers": {
+        "da": [],
+        "ko": [],
+        "en": []
+      }
+    },
+    {
+      "id": "vocab-2_kup-theory_terms-087",
+      "beltRank": "2_kup",
+      "category": "theory_terms",
+      "translations": {
+        "ko": "Ollyeo",
+        "da": "Opadgående",
+        "en": "Upward"
+      },
+      "incorrectAnswers": {
+        "da": [],
+        "ko": [],
+        "en": []
+      }
+    },
+    {
+      "id": "vocab-2_kup-theory_terms-088",
+      "beltRank": "2_kup",
+      "category": "theory_terms",
+      "translations": {
+        "ko": "Teok",
+        "da": "Hage",
+        "en": "Chin"
+      },
+      "incorrectAnswers": {
+        "da": [],
+        "ko": [],
+        "en": []
+      }
+    },
+    {
+      "id": "vocab-2_kup-theory_terms-089",
+      "beltRank": "2_kup",
+      "category": "theory_terms",
+      "translations": {
+        "ko": "Dangyeo",
+        "da": "Trække",
+        "en": "Pull"
+      },
+      "incorrectAnswers": {
+        "da": [],
+        "ko": [],
+        "en": []
+      }
+    },
+    {
+      "id": "vocab-1_kup-stances-026",
+      "beltRank": "1_kup",
+      "category": "stances",
+      "translations": {
+        "ko": "Tongmilgi joonbi seogi",
+        "da": "Skubbe klar stand",
+        "en": "Pushing ready stance"
+      },
+      "incorrectAnswers": {
+        "da": [],
+        "ko": [],
+        "en": []
+      }
+    },
+    {
+      "id": "vocab-1_kup-hand_techniques-058",
+      "beltRank": "1_kup",
+      "category": "hand_techniques",
+      "translations": {
+        "ko": "An palmok hechyeo makki",
+        "da": "Adskille blokering med indersiden af underarm",
+        "en": "Wedging block with inner forearm"
+      },
+      "incorrectAnswers": {
+        "da": [],
+        "ko": [],
+        "en": []
+      }
+    },
+    {
+      "id": "vocab-1_kup-theory_terms-089",
+      "beltRank": "1_kup",
+      "category": "theory_terms",
+      "translations": {
+        "ko": "Je chin pyeon sonkeut",
+        "da": "Håndfladen opad (fingerstik)",
+        "en": "Palm up (finger thrust)"
+      },
+      "incorrectAnswers": {
+        "da": [],
+        "ko": [],
+        "en": []
+      }
+    },
+    {
+      "id": "vocab-1_kup-theory_terms-090",
+      "beltRank": "1_kup",
+      "category": "theory_terms",
+      "translations": {
+        "ko": "Gu",
+        "da": "Niende (9.)",
+        "en": "Ninth (9th)"
+      },
+      "incorrectAnswers": {
+        "da": [],
+        "ko": [],
+        "en": []
+      }
+    },
+    {
+      "id": "vocab-1_kup-theory_terms-091",
+      "beltRank": "1_kup",
+      "category": "theory_terms",
+      "translations": {
+        "ko": "Ship",
+        "da": "Tiende (10.)",
+        "en": "Tenth (10th)"
       },
       "incorrectAnswers": {
         "da": [],
