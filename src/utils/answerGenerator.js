@@ -143,7 +143,12 @@ export function generateVocabularyQuestion(question, questionsData, language = '
 export function generateTheoryQuestion(question, language = 'da') {
   const questionText = question.question[language];
   const correctAnswer = question.correctAnswer[language];
-  const incorrectAnswers = question.incorrectAnswers[language] || [];
+  let incorrectAnswers = question.incorrectAnswers[language] || [];
+
+  // Randomly select 3 incorrect answers if more than 3 are available
+  if (incorrectAnswers.length > 3) {
+    incorrectAnswers = shuffleArray(incorrectAnswers).slice(0, 3);
+  }
 
   // Combine and shuffle all answers
   const allAnswers = [correctAnswer, ...incorrectAnswers];

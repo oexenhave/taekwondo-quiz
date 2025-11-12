@@ -2,10 +2,13 @@
  * Main App Component
  */
 
+import { useState } from 'react';
 import { ThemeProvider, createTheme, CssBaseline } from '@mui/material';
 import Setup from './components/Setup';
 import Quiz from './components/Quiz';
 import Results from './components/Results';
+import BeltRankList from './components/BeltRankList';
+import VocabularyBrowser from './components/VocabularyBrowser';
 import { useQuiz } from './hooks/useQuiz';
 import questionsData from './data/questions.json';
 
@@ -26,18 +29,67 @@ const theme = createTheme({
 
 function App() {
   const quiz = useQuiz(questionsData);
+  const [viewState, setViewState] = useState('setup'); // 'setup', 'belt-rank-list', 'vocabulary-browser'
+  const [selectedBrowseBelt, setSelectedBrowseBelt] = useState(null);
+
+  const handleBrowseVocabulary = () => {
+    setViewState('belt-rank-list');
+  };
+
+  const handleSelectBeltRank = (beltRank) => {
+    setSelectedBrowseBelt(beltRank);
+    setViewState('vocabulary-browser');
+  };
+
+  const handleBackToSetup = () => {
+    setViewState('setup');
+    setSelectedBrowseBelt(null);
+  };
+
+  const handleBackToBeltList = () => {
+    setViewState('belt-rank-list');
+    setSelectedBrowseBelt(null);
+  };
+
+  const handleRestartQuiz = () => {
+    setViewState('setup');
+    setSelectedBrowseBelt(null);
+    quiz.restartQuiz();
+  };
 
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
 
-      {quiz.quizState === 'setup' && (
+      {/* Setup Screen */}
+      {quiz.quizState === 'setup' && viewState === 'setup' && (
         <Setup
           metadata={questionsData.metadata}
           onStartQuiz={quiz.startQuiz}
+          onBrowseVocabulary={handleBrowseVocabulary}
         />
       )}
 
+      {/* Belt Rank Selection for Browsing */}
+      {viewState === 'belt-rank-list' && (
+        <BeltRankList
+          metadata={questionsData.metadata}
+          onSelectBeltRank={handleSelectBeltRank}
+          onBack={handleBackToSetup}
+        />
+      )}
+
+      {/* Vocabulary Browser */}
+      {viewState === 'vocabulary-browser' && selectedBrowseBelt && (
+        <VocabularyBrowser
+          beltRank={selectedBrowseBelt}
+          vocabularyQuestions={questionsData.vocabularyQuestions}
+          metadata={questionsData.metadata}
+          onBack={handleBackToBeltList}
+        />
+      )}
+
+      {/* Quiz Screen */}
       {quiz.quizState === 'quiz' && (
         <Quiz
           getCurrentQuestion={quiz.getCurrentQuestion}
@@ -47,15 +99,16 @@ function App() {
           handleAnswerSelect={quiz.handleAnswerSelect}
           handleNext={quiz.handleNext}
           isAnswerCorrect={quiz.isAnswerCorrect}
-          onRestart={quiz.restartQuiz}
+          onRestart={handleRestartQuiz}
         />
       )}
 
+      {/* Results Screen */}
       {quiz.quizState === 'results' && (
         <Results
           results={quiz.getResults()}
           metadata={questionsData.metadata}
-          onRestart={quiz.restartQuiz}
+          onRestart={handleRestartQuiz}
         />
       )}
     </ThemeProvider>

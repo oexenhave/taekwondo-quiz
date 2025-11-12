@@ -19,7 +19,7 @@ import { getBeltRankOptions } from '../utils/quizLogic';
 
 const QUESTION_COUNTS = [10, 25, 50, 100];
 
-export default function Setup({ metadata, onStartQuiz }) {
+export default function Setup({ metadata, onStartQuiz, onBrowseVocabulary }) {
   const [selectedBeltRank, setSelectedBeltRank] = useState('');
   const [selectedQuestionCount, setSelectedQuestionCount] = useState(null);
 
@@ -121,10 +121,25 @@ export default function Setup({ metadata, onStartQuiz }) {
             disabled={!canStart}
             sx={{
               py: 1.5,
-              fontSize: '1.1rem'
+              fontSize: '1.1rem',
+              mb: 2
             }}
           >
             Start test
+          </Button>
+
+          {/* Browse Vocabulary Button */}
+          <Button
+            variant="outlined"
+            size="large"
+            fullWidth
+            onClick={onBrowseVocabulary}
+            sx={{
+              py: 1.5,
+              fontSize: '1.1rem'
+            }}
+          >
+            Gennemse teorien
           </Button>
 
           {/* Version Info */}

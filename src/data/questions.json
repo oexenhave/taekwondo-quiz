@@ -4112,6 +4112,216 @@
         "ko": [],
         "en": []
       }
+    },
+    {
+      "id": "vocab-1_dan-theory_terms-001",
+      "beltRank": "1_dan",
+      "category": "theory_terms",
+      "translations": {
+        "ko": "Hanbeon gyeorugi",
+        "da": "Et skridts kamp",
+        "en": "One step sparring"
+      },
+      "incorrectAnswers": {
+        "da": [],
+        "ko": [],
+        "en": []
+      }
+    },
+    {
+      "id": "vocab-1_dan-theory_terms-002",
+      "beltRank": "1_dan",
+      "category": "theory_terms",
+      "translations": {
+        "ko": "Sebeon gyeorugi",
+        "da": "Tre skridts kamp",
+        "en": "Three step sparring"
+      },
+      "incorrectAnswers": {
+        "da": [],
+        "ko": [],
+        "en": []
+      }
+    },
+    {
+      "id": "vocab-1_dan-theory_terms-003",
+      "beltRank": "1_dan",
+      "category": "theory_terms",
+      "translations": {
+        "ko": "Cheong",
+        "da": "Blå",
+        "en": "Blue"
+      },
+      "incorrectAnswers": {
+        "da": [],
+        "ko": [],
+        "en": []
+      }
+    },
+    {
+      "id": "vocab-1_dan-theory_terms-004",
+      "beltRank": "1_dan",
+      "category": "theory_terms",
+      "translations": {
+        "ko": "Hong",
+        "da": "Rød",
+        "en": "Red"
+      },
+      "incorrectAnswers": {
+        "da": [],
+        "ko": [],
+        "en": []
+      }
+    },
+    {
+      "id": "vocab-1_dan-theory_terms-005",
+      "beltRank": "1_dan",
+      "category": "theory_terms",
+      "translations": {
+        "ko": "Myeongchi",
+        "da": "Solar plexus",
+        "en": "Solar plexus"
+      },
+      "incorrectAnswers": {
+        "da": [],
+        "ko": [],
+        "en": []
+      }
+    },
+    {
+      "id": "vocab-1_dan-theory_terms-006",
+      "beltRank": "1_dan",
+      "category": "theory_terms",
+      "translations": {
+        "ko": "Injung",
+        "da": "Overlæbe",
+        "en": "Upper lip"
+      },
+      "incorrectAnswers": {
+        "da": [],
+        "ko": [],
+        "en": []
+      }
+    },
+    {
+      "id": "vocab-1_dan-theory_terms-007",
+      "beltRank": "1_dan",
+      "category": "theory_terms",
+      "translations": {
+        "ko": "Sonbadak",
+        "da": "Håndflade",
+        "en": "Palm"
+      },
+      "incorrectAnswers": {
+        "da": [],
+        "ko": [],
+        "en": []
+      }
+    },
+    {
+      "id": "vocab-1_dan-theory_terms-008",
+      "beltRank": "1_dan",
+      "category": "theory_terms",
+      "translations": {
+        "ko": "Songarak",
+        "da": "Finger",
+        "en": "Finger"
+      },
+      "incorrectAnswers": {
+        "da": [],
+        "ko": [],
+        "en": []
+      }
+    },
+    {
+      "id": "vocab-1_dan-theory_terms-009",
+      "beltRank": "1_dan",
+      "category": "theory_terms",
+      "translations": {
+        "ko": "Sonmok",
+        "da": "Håndled",
+        "en": "Wrist"
+      },
+      "incorrectAnswers": {
+        "da": [],
+        "ko": [],
+        "en": []
+      }
+    },
+    {
+      "id": "vocab-1_dan-theory_terms-010",
+      "beltRank": "1_dan",
+      "category": "theory_terms",
+      "translations": {
+        "ko": "Balgarak",
+        "da": "Tå",
+        "en": "Toe"
+      },
+      "incorrectAnswers": {
+        "da": [],
+        "ko": [],
+        "en": []
+      }
+    },
+    {
+      "id": "vocab-1_dan-theory_terms-011",
+      "beltRank": "1_dan",
+      "category": "theory_terms",
+      "translations": {
+        "ko": "Oreun",
+        "da": "Højre",
+        "en": "Right"
+      },
+      "incorrectAnswers": {
+        "da": [],
+        "ko": [],
+        "en": []
+      }
+    },
+    {
+      "id": "vocab-1_dan-theory_terms-012",
+      "beltRank": "1_dan",
+      "category": "theory_terms",
+      "translations": {
+        "ko": "Oen",
+        "da": "Venstre",
+        "en": "Left"
+      },
+      "incorrectAnswers": {
+        "da": [],
+        "ko": [],
+        "en": []
+      }
+    },
+    {
+      "id": "vocab-1_dan-theory_terms-013",
+      "beltRank": "1_dan",
+      "category": "theory_terms",
+      "translations": {
+        "ko": "Modumbal chagi",
+        "da": "Dobbelspark",
+        "en": "Double kick"
+      },
+      "incorrectAnswers": {
+        "da": [],
+        "ko": [],
+        "en": []
+      }
+    },
+    {
+      "id": "vocab-1_dan-theory_terms-014",
+      "beltRank": "1_dan",
+      "category": "theory_terms",
+      "translations": {
+        "ko": "Sabeomnim kke gyeongnye",
+        "da": "Hilsen til instruktør",
+        "en": "Greeting to instructor"
+      },
+      "incorrectAnswers": {
+        "da": [],
+        "ko": [],
+        "en": []
+      }
     }
   ],
   "theoryQuestions": [
@@ -4244,7 +4454,7 @@
       "incorrectAnswers": {
         "da": [
           "Jorden (Gon)",
-          "Vind (Seon)", 
+          "Vind (Seon)",
           "Jorden (Gon)"
         ],
         "en": []
