@@ -29,11 +29,17 @@ const CATEGORY_ORDER = [
 export default function VocabularyBrowser({
   beltRank,
   vocabularyQuestions,
+  theoryQuestions,
   metadata,
   onBack
 }) {
   // Filter questions for selected belt rank
   const beltQuestions = vocabularyQuestions.filter(
+    q => q.beltRank === beltRank
+  );
+
+  // Filter theory questions for selected belt rank
+  const beltTheoryQuestions = theoryQuestions.filter(
     q => q.beltRank === beltRank
   );
 
@@ -114,10 +120,42 @@ export default function VocabularyBrowser({
             );
           })}
 
+          {/* Theory Questions Section */}
+          {beltTheoryQuestions.length > 0 && (
+            <Box sx={{ mb: 4 }}>
+              <Typography variant="h5" gutterBottom sx={{ mb: 2 }}>
+                Teori spørgsmål
+              </Typography>
+
+              <TableContainer component={Paper} variant="outlined">
+                <Table>
+                  <TableHead>
+                    <TableRow>
+                      <TableCell sx={{ fontWeight: 'bold', width: '60%' }}>
+                        Spørgsmål
+                      </TableCell>
+                      <TableCell sx={{ fontWeight: 'bold', width: '40%' }}>
+                        Korrekt svar
+                      </TableCell>
+                    </TableRow>
+                  </TableHead>
+                  <TableBody>
+                    {beltTheoryQuestions.map(question => (
+                      <TableRow key={question.id}>
+                        <TableCell>{question.question.da}</TableCell>
+                        <TableCell>{question.correctAnswer.da}</TableCell>
+                      </TableRow>
+                    ))}
+                  </TableBody>
+                </Table>
+              </TableContainer>
+            </Box>
+          )}
+
           {/* Show message if no vocabulary for this belt */}
-          {beltQuestions.length === 0 && (
+          {beltQuestions.length === 0 && beltTheoryQuestions.length === 0 && (
             <Typography variant="body1" color="text.secondary" align="center">
-              Ingen ordforråd tilgængeligt for denne bæltegrad.
+              Ingen ordforråd eller teori spørgsmål tilgængeligt for denne bæltegrad.
             </Typography>
           )}
         </CardContent>

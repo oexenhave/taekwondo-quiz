@@ -3199,21 +3199,6 @@
       }
     },
     {
-      "id": "vocab-2_dan-hand_techniques-064",
-      "beltRank": "2_dan",
-      "category": "hand_techniques",
-      "translations": {
-        "ko": "Keumgang momtong makki",
-        "da": "Diamant blokering i midtersektion",
-        "en": "Diamond block middle section"
-      },
-      "incorrectAnswers": {
-        "da": [],
-        "ko": [],
-        "en": []
-      }
-    },
-    {
       "id": "vocab-2_dan-hand_techniques-065",
       "beltRank": "2_dan",
       "category": "hand_techniques",
@@ -3939,7 +3924,7 @@
       "category": "hand_techniques",
       "translations": {
         "ko": "Eolgul bakkat chigi",
-        "da": "Udadgående slag",
+        "da": "Udadgående slag i høj sektion",
         "en": "Outward strike"
       },
       "incorrectAnswers": {
@@ -5325,26 +5310,6 @@
           "23",
           "25",
           "29"
-        ],
-        "en": []
-      }
-    },
-    {
-      "id": "theory-2_dan-041",
-      "beltRank": "2_dan",
-      "question": {
-        "da": "Hvor mange handleringer er der i \"Poomse Keumgang\"?",
-        "en": null
-      },
-      "correctAnswer": {
-        "da": "27",
-        "en": null
-      },
-      "incorrectAnswers": {
-        "da": [
-          "25",
-          "29",
-          "30"
         ],
         "en": []
       }

@@ -9,6 +9,7 @@ import Quiz from './components/Quiz';
 import Results from './components/Results';
 import BeltRankList from './components/BeltRankList';
 import VocabularyBrowser from './components/VocabularyBrowser';
+import Feedback from './components/Feedback';
 import { useQuiz } from './hooks/useQuiz';
 import questionsData from './data/questions.json';
 
@@ -29,11 +30,15 @@ const theme = createTheme({
 
 function App() {
   const quiz = useQuiz(questionsData);
-  const [viewState, setViewState] = useState('setup'); // 'setup', 'belt-rank-list', 'vocabulary-browser'
+  const [viewState, setViewState] = useState('setup'); // 'setup', 'belt-rank-list', 'vocabulary-browser', 'feedback'
   const [selectedBrowseBelt, setSelectedBrowseBelt] = useState(null);
 
   const handleBrowseVocabulary = () => {
     setViewState('belt-rank-list');
+  };
+
+  const handleFeedback = () => {
+    setViewState('feedback');
   };
 
   const handleSelectBeltRank = (beltRank) => {
@@ -67,6 +72,7 @@ function App() {
           metadata={questionsData.metadata}
           onStartQuiz={quiz.startQuiz}
           onBrowseVocabulary={handleBrowseVocabulary}
+          onFeedback={handleFeedback}
         />
       )}
 
@@ -84,8 +90,16 @@ function App() {
         <VocabularyBrowser
           beltRank={selectedBrowseBelt}
           vocabularyQuestions={questionsData.vocabularyQuestions}
+          theoryQuestions={questionsData.theoryQuestions}
           metadata={questionsData.metadata}
           onBack={handleBackToBeltList}
+        />
+      )}
+
+      {/* Feedback Screen */}
+      {viewState === 'feedback' && (
+        <Feedback
+          onBack={handleBackToSetup}
         />
       )}
 

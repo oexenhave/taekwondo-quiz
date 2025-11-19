@@ -13,13 +13,14 @@ import {
   FormControl,
   InputLabel,
   Button,
-  ButtonGroup
+  ButtonGroup,
+  Link
 } from '@mui/material';
 import { getBeltRankOptions } from '../utils/quizLogic';
 
 const QUESTION_COUNTS = [10, 25, 50, 100];
 
-export default function Setup({ metadata, onStartQuiz, onBrowseVocabulary }) {
+export default function Setup({ metadata, onStartQuiz, onBrowseVocabulary, onFeedback }) {
   const [selectedBeltRank, setSelectedBeltRank] = useState('');
   const [selectedQuestionCount, setSelectedQuestionCount] = useState(null);
 
@@ -142,15 +143,32 @@ export default function Setup({ metadata, onStartQuiz, onBrowseVocabulary }) {
             Gennemse teorien
           </Button>
 
-          {/* Version Info */}
-          <Typography
-            variant="caption"
-            color="text.secondary"
-            align="center"
-            sx={{ display: 'block', mt: 2 }}
-          >
-            v{__APP_VERSION__} • Built: {__BUILD_DATE__}
-          </Typography>
+          {/* Version Info and Feedback Link */}
+          <Box sx={{ mt: 2, textAlign: 'center' }}>
+            <Typography
+              variant="caption"
+              color="text.secondary"
+              component="span"
+            >
+              v{__APP_VERSION__} • Built: {__BUILD_DATE__}
+            </Typography>
+            <Typography
+              variant="caption"
+              component="span"
+              sx={{ mx: 1 }}
+              color="text.secondary"
+            >
+              •
+            </Typography>
+            <Link
+              component="button"
+              variant="caption"
+              onClick={onFeedback}
+              sx={{ cursor: 'pointer' }}
+            >
+              Feedback
+            </Link>
+          </Box>
         </CardContent>
       </Card>
     </Box>
