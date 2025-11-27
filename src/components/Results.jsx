@@ -6,10 +6,15 @@ import { Box, Card, CardContent, Typography, Button } from '@mui/material';
 import { EmojiEvents as TrophyIcon } from '@mui/icons-material';
 
 export default function Results({ results, metadata, onRestart }) {
-  const { score, total, percentage, message, beltRank, questionCount } = results;
+  const { score, total, percentage, message, beltRank, questionCount, categories } = results;
 
   // Get belt rank label from metadata
   const beltRankLabel = metadata.beltRanks[beltRank]?.da || beltRank;
+
+  // Get category labels from metadata
+  const categoryLabels = categories && categories.length > 0
+    ? categories.map(cat => metadata.categories[cat]?.da || cat).join(', ')
+    : 'Alle kategorier';
 
   const getScoreColor = () => {
     if (percentage >= 90) return 'success.main';
@@ -42,7 +47,7 @@ export default function Results({ results, metadata, onRestart }) {
             color="text.secondary"
             sx={{ mb: 2 }}
           >
-            Test til: {beltRankLabel}
+            Test til: {beltRankLabel} ({categoryLabels})
           </Typography>
 
           {/* Trophy Icon */}

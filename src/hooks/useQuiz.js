@@ -24,7 +24,7 @@ export function useQuiz(questionsData) {
    * Start quiz with selected configuration
    */
   const startQuiz = (beltRank, questionCount, categories = null) => {
-    setConfig({ beltRank, questionCount });
+    setConfig({ beltRank, questionCount, categories });
 
     // Select questions based on algorithm (with category filter)
     const { questions: selectedQuestions } =
@@ -140,7 +140,8 @@ export function useQuiz(questionsData) {
       percentage,
       message,
       beltRank: config.beltRank,
-      questionCount: config.questionCount
+      questionCount: config.questionCount,
+      categories: config.categories
     };
   };
 

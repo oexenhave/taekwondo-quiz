@@ -357,7 +357,7 @@
       "beltRank": "10_kup",
       "category": "leg_techniques",
       "translations": {
-        "ko": "Bakkat huryeo chagi",
+        "ko": "Bakkat chagi",
         "da": "Udadgående svingspark",
         "en": "Outward swing kick"
       },
@@ -372,7 +372,7 @@
       "beltRank": "10_kup",
       "category": "leg_techniques",
       "translations": {
-        "ko": "An huryeo chagi",
+        "ko": "An chagi",
         "da": "Indadgående svingspark",
         "en": "Inward swing kick"
       },
@@ -2423,21 +2423,6 @@
       }
     },
     {
-      "id": "vocab-4_kup-hand_techniques-046",
-      "beltRank": "4_kup",
-      "category": "hand_techniques",
-      "translations": {
-        "ko": "An palmok momtong hechyeo makki",
-        "da": "Adskille blokering i midter sektion med indersiden af underarmen",
-        "en": "Wedge block middle section with inner forearm"
-      },
-      "incorrectAnswers": {
-        "da": [],
-        "ko": [],
-        "en": []
-      }
-    },
-    {
       "id": "vocab-4_kup-leg_techniques-026",
       "beltRank": "4_kup",
       "category": "leg_techniques",
@@ -3300,36 +3285,6 @@
         "ko": "Naeryo chagi",
         "da": "Nedadgående spark",
         "en": "Downward kick"
-      },
-      "incorrectAnswers": {
-        "da": [],
-        "ko": [],
-        "en": []
-      }
-    },
-    {
-      "id": "vocab-10_kup-leg_techniques-025",
-      "beltRank": "10_kup",
-      "category": "leg_techniques",
-      "translations": {
-        "ko": "Bakat chagi",
-        "da": "Udadgående spark",
-        "en": "Outward kick"
-      },
-      "incorrectAnswers": {
-        "da": [],
-        "ko": [],
-        "en": []
-      }
-    },
-    {
-      "id": "vocab-10_kup-leg_techniques-026",
-      "beltRank": "10_kup",
-      "category": "leg_techniques",
-      "translations": {
-        "ko": "An chagi",
-        "da": "Indadgående spark",
-        "en": "Inward kick"
       },
       "incorrectAnswers": {
         "da": [],
