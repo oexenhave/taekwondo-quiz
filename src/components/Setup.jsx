@@ -14,8 +14,15 @@ import {
   InputLabel,
   Button,
   ButtonGroup,
-  Link
+  Link,
+  Accordion,
+  AccordionSummary,
+  AccordionDetails,
+  FormGroup,
+  FormControlLabel,
+  Checkbox
 } from '@mui/material';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { getBeltRankOptions } from '../utils/quizLogic';
 
 const QUESTION_COUNTS = [10, 25, 50, 100];
@@ -24,11 +31,25 @@ export default function Setup({ metadata, onStartQuiz, onBrowseVocabulary, onFee
   const [selectedBeltRank, setSelectedBeltRank] = useState('');
   const [selectedQuestionCount, setSelectedQuestionCount] = useState(null);
 
+  // Get all category keys and initialize all as selected
+  const categoryKeys = Object.keys(metadata.categories);
+  const [selectedCategories, setSelectedCategories] = useState(
+    categoryKeys.reduce((acc, key) => ({ ...acc, [key]: true }), {})
+  );
+
   const beltRankOptions = getBeltRankOptions(metadata);
+
+  const handleCategoryToggle = (category) => {
+    setSelectedCategories(prev => ({
+      ...prev,
+      [category]: !prev[category]
+    }));
+  };
 
   const handleStart = () => {
     if (selectedBeltRank && selectedQuestionCount) {
-      onStartQuiz(selectedBeltRank, selectedQuestionCount);
+      const enabledCategories = categoryKeys.filter(key => selectedCategories[key]);
+      onStartQuiz(selectedBeltRank, selectedQuestionCount, enabledCategories);
     }
   };
 
@@ -62,7 +83,7 @@ export default function Setup({ metadata, onStartQuiz, onBrowseVocabulary, onFee
           </Box>
 
           <Typography variant="h4" component="h1" gutterBottom align="center">
-            Taekwondo Teori Quiz
+            Seung Li Taekwondo Quiz
           </Typography>
 
           <Typography variant="body1" color="text.secondary" paragraph align="center">
@@ -88,7 +109,7 @@ export default function Setup({ metadata, onStartQuiz, onBrowseVocabulary, onFee
           </FormControl>
 
           {/* Question Count Selection */}
-          <Box sx={{ mb: 4 }}>
+          <Box sx={{ mb: 3 }}>
             <Typography variant="body1" gutterBottom sx={{ mb: 2 }}>
               Antal spørgsmål
             </Typography>
@@ -112,6 +133,33 @@ export default function Setup({ metadata, onStartQuiz, onBrowseVocabulary, onFee
               ))}
             </ButtonGroup>
           </Box>
+
+          {/* Category Filter (Collapsible) */}
+          <Accordion sx={{ mb: 4 }} elevation={0}>
+            <AccordionSummary
+              expandIcon={<ExpandMoreIcon />}
+              aria-controls="category-filter-content"
+              id="category-filter-header"
+            >
+              <Typography variant="body2">Tilpas kategorier til quizzen</Typography>
+            </AccordionSummary>
+            <AccordionDetails>
+              <FormGroup>
+                {categoryKeys.map(categoryKey => (
+                  <FormControlLabel
+                    key={categoryKey}
+                    control={
+                      <Checkbox
+                        checked={selectedCategories[categoryKey]}
+                        onChange={() => handleCategoryToggle(categoryKey)}
+                      />
+                    }
+                    label={metadata.categories[categoryKey].da}
+                  />
+                ))}
+              </FormGroup>
+            </AccordionDetails>
+          </Accordion>
 
           {/* Start Button */}
           <Button

@@ -23,12 +23,12 @@ export function useQuiz(questionsData) {
   /**
    * Start quiz with selected configuration
    */
-  const startQuiz = (beltRank, questionCount) => {
+  const startQuiz = (beltRank, questionCount, categories = null) => {
     setConfig({ beltRank, questionCount });
 
-    // Select questions based on algorithm
+    // Select questions based on algorithm (with category filter)
     const { questions: selectedQuestions } =
-      selectQuestions(questionsData, beltRank, questionCount);
+      selectQuestions(questionsData, beltRank, questionCount, categories);
 
     setQuestions(selectedQuestions);
 

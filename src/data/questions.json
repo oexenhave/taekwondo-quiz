@@ -68,12 +68,16 @@
         "en": "Leg Techniques"
       },
       "theory_terms": {
-        "da": "Teori",
+        "da": "Teori termer",
         "en": "Theory Terms"
       },
-      "miscellaneous": {
-        "da": "Diverse",
-        "en": "Miscellaneous"
+      "technical_knowledge": {
+        "da": "Teknisk viden",
+        "en": "Technical Knowledge"
+      },
+      "symbolism_philosophy": {
+        "da": "Symbolik og filosofi",
+        "en": "Symbolism and Philosophy"
       }
     }
   },
@@ -2929,21 +2933,6 @@
       }
     },
     {
-      "id": "vocab-1_kup-stances-025",
-      "beltRank": "1_kup",
-      "category": "stances",
-      "translations": {
-        "ko": "Tong milgi joonbi seogi",
-        "da": "Skubbe beholder klar stand",
-        "en": "Push barrel ready stance"
-      },
-      "incorrectAnswers": {
-        "da": [],
-        "ko": [],
-        "en": []
-      }
-    },
-    {
       "id": "vocab-1_kup-hand_techniques-052",
       "beltRank": "1_kup",
       "category": "hand_techniques",
@@ -3566,36 +3555,6 @@
         "ko": "Poom",
         "da": "Grundteknik",
         "en": "Basic technique"
-      },
-      "incorrectAnswers": {
-        "da": [],
-        "ko": [],
-        "en": []
-      }
-    },
-    {
-      "id": "vocab-7_kup-stances-001",
-      "beltRank": "7_kup",
-      "category": "stances",
-      "translations": {
-        "ko": "Na chooeo seogi",
-        "da": "Dyb stand",
-        "en": "Deep stance"
-      },
-      "incorrectAnswers": {
-        "da": [],
-        "ko": [],
-        "en": []
-      }
-    },
-    {
-      "id": "vocab-7_kup-stances-002",
-      "beltRank": "7_kup",
-      "category": "stances",
-      "translations": {
-        "ko": "Dwit koobi",
-        "da": "Sidestand",
-        "en": "Side stance"
       },
       "incorrectAnswers": {
         "da": [],
@@ -4327,7 +4286,8 @@
           "Cho Kup Ja"
         ],
         "en": []
-      }
+      },
+      "category": "symbolism_philosophy"
     },
     {
       "id": "theory-1_dan-002",
@@ -4346,7 +4306,8 @@
           "Ko dan ja"
         ],
         "en": []
-      }
+      },
+      "category": "symbolism_philosophy"
     },
     {
       "id": "theory-1_dan-003",
@@ -4365,7 +4326,8 @@
           "Taegeuk Yook Jang"
         ],
         "en": []
-      }
+      },
+      "category": "technical_knowledge"
     },
     {
       "id": "theory-1_dan-004",
@@ -4384,7 +4346,8 @@
           "Taegeuk Yook Jang"
         ],
         "en": []
-      }
+      },
+      "category": "technical_knowledge"
     },
     {
       "id": "theory-1_dan-005",
@@ -4403,7 +4366,8 @@
           "1 (Geon), 3 (Ri), 5 (Son), 7 (Gan)"
         ],
         "en": []
-      }
+      },
+      "category": "symbolism_philosophy"
     },
     {
       "id": "theory-1_dan-006",
@@ -4423,7 +4387,8 @@
           "Torden (Jin)"
         ],
         "en": []
-      }
+      },
+      "category": "symbolism_philosophy"
     },
     {
       "id": "theory-1_dan-007",
@@ -4443,7 +4408,8 @@
           "Jorden (Gon)"
         ],
         "en": []
-      }
+      },
+      "category": "symbolism_philosophy"
     },
     {
       "id": "theory-1_dan-009",
@@ -4462,7 +4428,8 @@
           "De GWE'er der er på det koreanske flag"
         ],
         "en": []
-      }
+      },
+      "category": "symbolism_philosophy"
     },
     {
       "id": "theory-1_dan-010",
@@ -4481,7 +4448,8 @@
           "Bo joomeok joobi seogi"
         ],
         "en": []
-      }
+      },
+      "category": "technical_knowledge"
     },
     {
       "id": "theory-1_dan-011",
@@ -4500,7 +4468,8 @@
           "Taegeuk Sam Jang"
         ],
         "en": []
-      }
+      },
+      "category": "symbolism_philosophy"
     },
     {
       "id": "theory-1_dan-012",
@@ -4519,7 +4488,8 @@
           "At påkalde sig andres opmærksomhed og få hjælp i en farlig situation"
         ],
         "en": []
-      }
+      },
+      "category": "technical_knowledge"
     },
     {
       "id": "theory-1_dan-017",
@@ -4538,7 +4508,8 @@
           "Paekche"
         ],
         "en": []
-      }
+      },
+      "category": "symbolism_philosophy"
     },
     {
       "id": "theory-1_dan-018",
@@ -4557,7 +4528,8 @@
           "Fra en koreansk slette"
         ],
         "en": []
-      }
+      },
+      "category": "symbolism_philosophy"
     },
     {
       "id": "theory-1_dan-019",
@@ -4576,7 +4548,8 @@
           "Gibon joonbi seogi"
         ],
         "en": []
-      }
+      },
+      "category": "technical_knowledge"
     },
     {
       "id": "theory-1_dan-020",
@@ -4595,7 +4568,8 @@
           "Deung joomeok eolgul ape chigi"
         ],
         "en": []
-      }
+      },
+      "category": "technical_knowledge"
     },
     {
       "id": "theory-1_dan-021",
@@ -4614,7 +4588,8 @@
           "32"
         ],
         "en": []
-      }
+      },
+      "category": "symbolism_philosophy"
     },
     {
       "id": "theory-1_dan-022",
@@ -4633,7 +4608,8 @@
           "Taegeuk Sah Jang"
         ],
         "en": []
-      }
+      },
+      "category": "technical_knowledge"
     },
     {
       "id": "theory-1_dan-024",
@@ -4652,7 +4628,8 @@
           "Taegeuk Pal Jang"
         ],
         "en": []
-      }
+      },
+      "category": "technical_knowledge"
     },
     {
       "id": "theory-1_dan-025",
@@ -4671,7 +4648,8 @@
           "Det er ligegyldigt"
         ],
         "en": []
-      }
+      },
+      "category": "technical_knowledge"
     },
     {
       "id": "theory-1_dan-026",
@@ -4690,7 +4668,8 @@
           "To"
         ],
         "en": []
-      }
+      },
+      "category": "technical_knowledge"
     },
     {
       "id": "theory-1_dan-027",
@@ -4709,7 +4688,8 @@
           "Advarsel"
         ],
         "en": []
-      }
+      },
+      "category": "technical_knowledge"
     },
     {
       "id": "theory-1_dan-028",
@@ -4728,7 +4708,8 @@
           "Taegeuk Sah Jang"
         ],
         "en": []
-      }
+      },
+      "category": "technical_knowledge"
     },
     {
       "id": "theory-1_dan-029",
@@ -4747,7 +4728,8 @@
           "Knoerne svarende til pege-, lange, ring- og lillefingre"
         ],
         "en": []
-      }
+      },
+      "category": "technical_knowledge"
     },
     {
       "id": "theory-1_dan-030",
@@ -4766,7 +4748,8 @@
           "Hanguk"
         ],
         "en": []
-      }
+      },
+      "category": "symbolism_philosophy"
     },
     {
       "id": "theory-1_dan-031",
@@ -4785,7 +4768,8 @@
           "Palgwe"
         ],
         "en": []
-      }
+      },
+      "category": "symbolism_philosophy"
     },
     {
       "id": "theory-1_dan-032",
@@ -4804,7 +4788,8 @@
           "1970"
         ],
         "en": []
-      }
+      },
+      "category": "symbolism_philosophy"
     },
     {
       "id": "theory-1_dan-033",
@@ -4823,7 +4808,8 @@
           "1972"
         ],
         "en": []
-      }
+      },
+      "category": "symbolism_philosophy"
     },
     {
       "id": "theory-2_dan-034",
@@ -4842,7 +4828,8 @@
           "Taegeuk Sah Jang"
         ],
         "en": []
-      }
+      },
+      "category": "technical_knowledge"
     },
     {
       "id": "theory-2_dan-035",
@@ -4861,7 +4848,8 @@
           "Poomse Koryo"
         ],
         "en": []
-      }
+      },
+      "category": "technical_knowledge"
     },
     {
       "id": "theory-2_dan-036",
@@ -4880,7 +4868,8 @@
           "Majestætisk bjerg"
         ],
         "en": []
-      }
+      },
+      "category": "symbolism_philosophy"
     },
     {
       "id": "theory-2_dan-037",
@@ -4899,7 +4888,8 @@
           "Det kinesiske tegn for diamant"
         ],
         "en": []
-      }
+      },
+      "category": "symbolism_philosophy"
     },
     {
       "id": "theory-2_dan-038",
@@ -4918,7 +4908,8 @@
           "En viljestærk mand"
         ],
         "en": []
-      }
+      },
+      "category": "symbolism_philosophy"
     },
     {
       "id": "theory-2_dan-039",
@@ -4937,7 +4928,8 @@
           "1680"
         ],
         "en": []
-      }
+      },
+      "category": "symbolism_philosophy"
     },
     {
       "id": "theory-2_dan-040",
@@ -4956,7 +4948,8 @@
           "26"
         ],
         "en": []
-      }
+      },
+      "category": "symbolism_philosophy"
     },
     {
       "id": "theory-3_dan-041",
@@ -4975,7 +4968,8 @@
           "Det er et gammelt navn for Korea"
         ],
         "en": []
-      }
+      },
+      "category": "symbolism_philosophy"
     },
     {
       "id": "theory-3_dan-042",
@@ -4994,7 +4988,8 @@
           "Hurtigt og kraftfuldt"
         ],
         "en": []
-      }
+      },
+      "category": "symbolism_philosophy"
     },
     {
       "id": "theory-3_dan-043",
@@ -5013,7 +5008,8 @@
           "Sonnal arae eotgeoreo makki"
         ],
         "en": []
-      }
+      },
+      "category": "technical_knowledge"
     },
     {
       "id": "theory-3_dan-044",
@@ -5032,7 +5028,8 @@
           "30"
         ],
         "en": []
-      }
+      },
+      "category": "symbolism_philosophy"
     },
     {
       "id": "theory-1_dan-034",
@@ -5052,7 +5049,8 @@
           "Torden (Jin)"
         ],
         "en": []
-      }
+      },
+      "category": "symbolism_philosophy"
     },
     {
       "id": "theory-1_dan-035",
@@ -5072,7 +5070,8 @@
           "Torden (Jin)"
         ],
         "en": []
-      }
+      },
+      "category": "symbolism_philosophy"
     },
     {
       "id": "theory-1_dan-036",
@@ -5092,7 +5091,8 @@
           "Vand (Gam)"
         ],
         "en": []
-      }
+      },
+      "category": "symbolism_philosophy"
     },
     {
       "id": "theory-1_dan-037",
@@ -5112,7 +5112,8 @@
           "Bjerg (Gan)"
         ],
         "en": []
-      }
+      },
+      "category": "symbolism_philosophy"
     },
     {
       "id": "theory-1_dan-038",
@@ -5132,7 +5133,8 @@
           "Himmeriget/lyset (Keon)"
         ],
         "en": []
-      }
+      },
+      "category": "symbolism_philosophy"
     },
     {
       "id": "theory-1_dan-039",
@@ -5152,7 +5154,8 @@
           "Glæde/flod (Tae)"
         ],
         "en": []
-      }
+      },
+      "category": "symbolism_philosophy"
     },
     {
       "id": "theory-1_dan-040",
@@ -5172,7 +5175,8 @@
           "22"
         ],
         "en": []
-      }
+      },
+      "category": "symbolism_philosophy"
     },
     {
       "id": "theory-1_dan-041",
@@ -5192,7 +5196,8 @@
           "22"
         ],
         "en": []
-      }
+      },
+      "category": "symbolism_philosophy"
     },
     {
       "id": "theory-1_dan-042",
@@ -5212,7 +5217,8 @@
           "24"
         ],
         "en": []
-      }
+      },
+      "category": "symbolism_philosophy"
     },
     {
       "id": "theory-1_dan-043",
@@ -5232,7 +5238,8 @@
           "24"
         ],
         "en": []
-      }
+      },
+      "category": "symbolism_philosophy"
     },
     {
       "id": "theory-1_dan-044",
@@ -5252,7 +5259,8 @@
           "24"
         ],
         "en": []
-      }
+      },
+      "category": "symbolism_philosophy"
     },
     {
       "id": "theory-1_dan-045",
@@ -5272,7 +5280,8 @@
           "23"
         ],
         "en": []
-      }
+      },
+      "category": "symbolism_philosophy"
     },
     {
       "id": "theory-1_dan-046",
@@ -5292,7 +5301,8 @@
           "29"
         ],
         "en": []
-      }
+      },
+      "category": "symbolism_philosophy"
     },
     {
       "id": "theory-1_dan-047",
@@ -5312,7 +5322,8 @@
           "29"
         ],
         "en": []
-      }
+      },
+      "category": "symbolism_philosophy"
     },
     {
       "id": "theory-3_dan-045",
@@ -5332,7 +5343,8 @@
           "30"
         ],
         "en": []
-      }
+      },
+      "category": "symbolism_philosophy"
     },
     {
       "id": "theory-3_dan-046",
@@ -5352,7 +5364,8 @@
           "Evigt liv"
         ],
         "en": []
-      }
+      },
+      "category": "symbolism_philosophy"
     }
   ]
 }

@@ -53,12 +53,13 @@ function getBeltRanksToInclude(selectedBeltRank) {
 }
 
 /**
- * Filter questions by belt ranks
+ * Filter questions by belt ranks and categories
  * @param {Object} questionsData - Complete questions data from JSON
  * @param {string[]} beltRanks - Array of belt ranks to include
+ * @param {string[]} categories - Array of categories to include (optional, includes all if not provided)
  * @returns {Object} - Questions grouped by belt rank
  */
-function filterQuestionsByBeltRanks(questionsData, beltRanks) {
+function filterQuestionsByBeltRanks(questionsData, beltRanks, categories = null) {
   const grouped = {};
 
   // Initialize groups
@@ -69,19 +70,23 @@ function filterQuestionsByBeltRanks(questionsData, beltRanks) {
     };
   });
 
-  // Group vocabulary questions
+  // Group vocabulary questions (with category filter)
   questionsData.vocabularyQuestions.forEach(q => {
     if (beltRanks.includes(q.beltRank)) {
-      grouped[q.beltRank].vocabulary.push(q);
+      // If categories filter is provided, check if question's category is included
+      if (!categories || categories.includes(q.category)) {
+        grouped[q.beltRank].vocabulary.push(q);
+      }
     }
   });
 
-  // Group theory questions (filter out those without sufficient incorrect answers)
+  // Group theory questions (with category filter, and filter out those without sufficient incorrect answers)
   questionsData.theoryQuestions.forEach(q => {
     if (beltRanks.includes(q.beltRank)) {
       // Check if theory question has at least 1 incorrect answer
       const hasEnoughAnswers = q.incorrectAnswers.da && q.incorrectAnswers.da.length >= 1;
-      if (hasEnoughAnswers) {
+      // If categories filter is provided, check if question's category is included
+      if (hasEnoughAnswers && (!categories || categories.includes(q.category))) {
         grouped[q.beltRank].theory.push(q);
       }
     }
@@ -109,9 +114,10 @@ function shuffleArray(array) {
  * @param {Object} questionsData - Complete questions data from JSON
  * @param {string} selectedBeltRank - Selected belt rank
  * @param {number} totalQuestions - Total number of questions requested
+ * @param {string[]} categories - Array of categories to include (optional)
  * @returns {Object} - { questions: Array, warning: string|null }
  */
-export function selectQuestions(questionsData, selectedBeltRank, totalQuestions) {
+export function selectQuestions(questionsData, selectedBeltRank, totalQuestions, categories = null) {
   // Get belt ranks to include
   const beltRanks = getBeltRanksToInclude(selectedBeltRank);
   const previousLevels = beltRanks.length - 1;
@@ -119,8 +125,8 @@ export function selectQuestions(questionsData, selectedBeltRank, totalQuestions)
   // Get distribution percentages
   const distribution = getDistribution(previousLevels);
 
-  // Filter and group questions
-  const groupedQuestions = filterQuestionsByBeltRanks(questionsData, beltRanks);
+  // Filter and group questions (with category filter)
+  const groupedQuestions = filterQuestionsByBeltRanks(questionsData, beltRanks, categories);
 
   // Calculate target counts for each level
   const targetCounts = distribution.map(percentage =>
